@@ -1,0 +1,20 @@
+
+•
+java:S1319""sThe return type of this method should be an interface such as "SortedSet" rather than the implementation "TreeSet".(¬Ú–äøÿÿÿÿ8ö©€ğ0
+
+java:S1319&"kThe type of "studenti" should be an interface such as "SortedSet" rather than the implementation "TreeSet".(ô±Š¡úÿÿÿÿ8ö©€ğ0
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úÚ”8ö©€ğ0
+m	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£–ª8ö©€ğ0
+w	java:S116"VRename this field "numar_grupa" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„ëÛİûÿÿÿÿ8Ãšÿÿï0
+{
+java:S3008"YRename this field "numar_studenti" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ûÑ§úÿÿÿÿ8Ãšÿÿï0
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š£Ÿ 8Äšÿÿï0
+S
+java:S2696"6Make the enclosing method "static" or remove this set.(€£ÅÄ8Äšÿÿï0
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ÓÆİøÿÿÿÿ8Äšÿÿï0
+S
+java:S2696"6Make the enclosing method "static" or remove this set.(ØÆË¶8Åšÿÿï0
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷¼’üÿÿÿÿ8ú©€ğ0
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úÚ”8û©€ğ0
+j	java:S100*"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆšú¬8û©€ğ0
+j	java:S100."NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£–ª8û©€ğ0
