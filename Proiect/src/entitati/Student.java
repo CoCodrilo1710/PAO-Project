@@ -1,9 +1,10 @@
 package entitati;
 
+import java.util.Comparator;
 import java.util.Objects;
 import java.util.Vector;
 
-public class Student extends Persoana{
+public class Student extends Persoana implements Comparable<Student>{
 
     private String studentEmail;
     private String NrTelefon;
@@ -19,7 +20,7 @@ public class Student extends Persoana{
 
     public Student(String cnp, String Prenume, String Nume, int age) {
         super(cnp, Prenume, Nume, age);
-        situatie=null;
+        situatie=new Vector<>();
     }
 
 
@@ -101,4 +102,8 @@ public class Student extends Persoana{
         return Objects.hash(super.hashCode(), studentEmail, NrTelefon);
     }
 
+    @Override
+    public int compareTo(Student o) {
+        return Comparator.comparing(Student::getNume).thenComparing(Student::getPrenume).compare(this, o);
+    }
 }

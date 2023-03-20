@@ -11,6 +11,12 @@ public class Grupa {
         numar_studenti = 0;
     }
 
+    public Grupa(int nrgrupa)
+    {
+        studenti=new TreeSet<>();
+        numar_grupa=nrgrupa;
+    }
+
     public void Adauga_Student(Student local)
     {
         studenti.add(local);
