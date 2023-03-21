@@ -87,7 +87,7 @@ public class Service_Central {
             System.out.println();
             System.out.println();
 
-            System.out.println("Specificati numarul de note pe care doriti sa-l adaugati: (  \n O sa alegeti pentru fiecare nota in parte la ce materie sa o adaugati");
+            System.out.println("Specificati numarul de note pe care doriti sa-l adaugati: \n(O sa alegeti pentru fiecare nota in parte la ce materie sa o adaugati)");
             int nrnote_local = var.nextInt();
 
             Servicii_Materii maintain_local_materii= new Servicii_Materii();
@@ -96,26 +96,38 @@ public class Service_Central {
             System.out.println();
             System.out.println();
 
-            System.out.println("Notele trebuie introduse sub forma: nota ( urmata de tasta ENTER), iar mai apoi data(sub forma: zz.ll");
+            System.out.println("Notele trebuie introduse sub forma: nota ( urmata de tasta ENTER), iar mai apoi data(sub forma: zz.ll)");
+            System.out.println();
 
             for (int i2=0;i2<nrnote_local;i2++)
             {
+                System.out.println("Introduceti nota #"+i2+ ": ");
                 int nota= var.nextInt();
                 String data=var.next();
-                String backData=data;
+
                 LocalDate localDate=LocalDate.now();
                 int year=localDate.getYear()-1;
+                if (data.substring(0,2).contains("."))
+                    data="0"+data;
+                String backData=data;
                 data=data+"."+year;
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.uuuu");
                 LocalDate final1 = LocalDate.parse(data,formatter);
 
-                System.out.println("\n \n Va rugam alegeti materia la care doriti sa adaugati nota: \n Scrieti doar cifra corespunzatoare! \n");
+                System.out.println("\n \nVa rugam alegeti materia la care doriti sa adaugati nota: \n Scrieti doar cifra corespunzatoare! \n");
                 maintain_local_materii.afisare_materii();
                 int optiune = var.nextInt();
 
                 maintain_local_materii.add_nota(local_vector,optiune,nota,final1);
 
-                System.out.println("Ati adaugat cu succes nota "+ nota + "/" + backData + " la materia ------ " + local_vector.get(optiune).getNumeMaterie().toString() + " ------" );
+                System.out.println();
+                System.out.println("Ati adaugat cu succes nota "+ nota + "/" + backData + " la materia ------ " + maintain_local_materii.nume_materie(local_vector,optiune) + " ------" );
+
+                System.out.println();
+                System.out.println();
+                System.out.println();
+
+
             }
 
 

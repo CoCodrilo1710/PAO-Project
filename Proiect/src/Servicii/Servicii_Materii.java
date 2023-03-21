@@ -53,4 +53,9 @@ public class Servicii_Materii {
         return local.get(materie).getter_data(  local.get(materie).getNote().get(pozitie) );
     }
 
+    public String nume_materie(Vector<Materie> local,int materie)
+    {
+        return local.get(materie).getNumeMaterie().toString();
+    }
+
 }
