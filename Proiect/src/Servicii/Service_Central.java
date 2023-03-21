@@ -130,8 +130,54 @@ public class Service_Central {
 
             }
 
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("Apasati tasta ENTER pentru a adauga absentele, ecranul se va goli!");
 
-            System.out.println(maintain_local_materii.return_nota(local_vector,4,0));   ///printare nota
+            String temp = var.nextLine();
+            key = var.nextLine();
+            if (key.equals(""))
+            {
+                int numRowsInConsole = 60;
+                for (int iii=0; iii<numRowsInConsole; iii++) {
+                    System.out.println();
+                }
+            }
+
+      //      System.out.println(maintain_local_materii.return_nota(local_vector,4,0));   // printare nota
+
+
+            System.out.println("Specificati numarul de ABSENTE pe care doriti sa-l adaugati: \n(O sa alegeti pentru fiecare ABSENTA in parte la ce materie sa o adaugati)");
+            int nrabsente_local = var.nextInt();
+            System.out.println();
+            System.out.println("Absentele trebuiesc introduse sub forma zz.dd ! Dupa fiecare absenta apsati tasta ENTER");
+            if (nrabsente_local==0)
+            {
+                System.out.println();
+                System.out.println();
+                System.out.println();
+                System.out.println();
+                System.out.println("Ati citit toate detaliile necesare! \nLa apasarea tastei ENTER va va trimite in meniul aplicatiei!");
+                String temp1 = var.nextLine();
+                key = var.nextLine();
+                if (key.equals(""))
+                {
+                    int numRowsInConsole = 60;
+                    for (int iii=0; iii<numRowsInConsole; iii++) {
+                        System.out.println();
+                    }
+                }
+                local.setSituatie(local_vector);
+                grupa.getStudenti().add(local);
+
+            }
+
+            for (int i3=0;i)
+
+                
+
+
 
             System.out.println();
 
