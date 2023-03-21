@@ -4,20 +4,23 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.TreeSet;
 
-enum AllMaterii
-{
-    PAO,
-    Inteligenta_Artificiala,
-    Algoritmi_Avansati,
-    Engleza,
-    MDS,
-    FLP
-}
 public class Materie {
 
-    class forma{
-        public int nota;
-        public LocalDate Data;
+    public class forma{
+        private int nota;
+        private LocalDate Data;
+
+
+    }
+
+    public int getter_nota(forma x)
+    {
+        return x.nota;
+    }
+
+    public LocalDate getter_data(forma x)
+    {
+        return x.Data;
     }
 
     private Profesor profesor;
@@ -28,6 +31,15 @@ public class Materie {
     private ArrayList<forma>  note;
     private boolean restanta;
     private TreeSet<LocalDate> absente;
+
+    public forma get_forma(int local_nota, LocalDate local_data)
+    {
+        forma aici = new forma();
+        aici.Data=local_data;
+        aici.nota=local_nota;
+
+        return aici;
+    }
 
     public Materie(AllMaterii numeMaterie, int credite, int nrAbsente, int nrNote, boolean restanta) {
         this.numeMaterie = numeMaterie;
@@ -46,8 +58,8 @@ public class Materie {
         this.nrAbsente = 0;
         this.nrNote = 0;
         this.restanta = false;
-        this.absente = null;
-        this.note = null;
+        this.absente = new TreeSet<>();
+        this.note = new ArrayList<>();
     }
 
     public int getCredite() {
