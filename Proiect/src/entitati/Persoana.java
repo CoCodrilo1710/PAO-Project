@@ -2,7 +2,7 @@ package entitati;
 
 import java.util.Objects;
 
-public class Persoana {
+public abstract class Persoana {
     protected String cnp;
     protected String Prenume;
     protected String Nume;

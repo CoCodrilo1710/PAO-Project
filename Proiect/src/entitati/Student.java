@@ -13,6 +13,8 @@ public class Student extends Persoana implements Comparable<Student>{
 
     private Vector<Materie> situatie;
 
+    private double medie;
+
     public Student() {
         super();
         situatie=null;
@@ -31,6 +33,7 @@ public class Student extends Persoana implements Comparable<Student>{
         this.AndeStudiu = AndeStudiu;
         this.semestru = semestru;
         this.situatie= new Vector<>();
+        this.medie=0.0D;
     }
 
     public String getStudentEmail() {
@@ -71,6 +74,14 @@ public class Student extends Persoana implements Comparable<Student>{
 
     public void setSituatie(Vector<Materie> situatie) {
         this.situatie = situatie;
+    }
+
+    public double getMedie() {
+        return medie;
+    }
+
+    public void setMedie(double medie) {
+        this.medie = medie;
     }
 
     @Override

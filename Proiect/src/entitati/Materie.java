@@ -24,10 +24,12 @@ public class Materie {
     }
 
     private Profesor profesor;
-    private AllMaterii numeMaterie;
+    private allMaterii numeMaterie;
     private int credite;
     private int nrAbsente;
     private int nrNote;
+
+    private double medie;
     private ArrayList<forma>  note;
     private boolean restanta;
     private TreeSet<LocalDate> absente;
@@ -41,7 +43,7 @@ public class Materie {
         return aici;
     }
 
-    public Materie(AllMaterii numeMaterie, int credite, int nrAbsente, int nrNote, boolean restanta) {
+    public Materie(allMaterii numeMaterie, int credite, int nrAbsente, int nrNote, boolean restanta) {
         this.numeMaterie = numeMaterie;
         this.credite = credite;
         this.nrAbsente = nrAbsente;
@@ -60,6 +62,13 @@ public class Materie {
         this.restanta = false;
         this.absente = new TreeSet<>();
         this.note = new ArrayList<>();
+    }
+    public double getMedie() {
+        return medie;
+    }
+
+    public void setMedie(double medie) {
+        this.medie = medie;
     }
 
     public int getCredite() {
@@ -118,11 +127,11 @@ public class Materie {
         this.absente = absente;
     }
 
-    public AllMaterii getNumeMaterie() {
+    public allMaterii getNumeMaterie() {
         return numeMaterie;
     }
 
-    public void setNumeMaterie(AllMaterii numeMaterie) {
+    public void setNumeMaterie(allMaterii numeMaterie) {
         this.numeMaterie = numeMaterie;
     }
 
