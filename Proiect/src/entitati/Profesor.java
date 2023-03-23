@@ -2,7 +2,7 @@ package entitati;
 
 import java.util.Objects;
 
-public class Profesor extends Persoana{
+public class Profesor extends Persoana {
     private static int id;
     private String Email;
     private int Salariu;

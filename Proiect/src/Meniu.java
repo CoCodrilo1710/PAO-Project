@@ -1,7 +1,6 @@
-
-import Servicii.serviciiGrupa;
-import Servicii.serviciiMaterii;
-import Servicii.serviciiStudent;
+import Servicii.ServiciiGrupa;
+import Servicii.ServiciiMaterii;
+import Servicii.ServiciiStudent;
 import entitati.Grupa;
 import entitati.Materie;
 import entitati.Profesor;
@@ -79,7 +78,7 @@ public class Meniu {
             System.out.println("Specificati numarul de note pe care doriti sa-l adaugati: \n(O sa alegeti pentru fiecare nota in parte la ce materie sa o adaugati)");
             int nrnote_local = var.nextInt();
 
-            serviciiMaterii maintain_local_materii = new serviciiMaterii();
+            ServiciiMaterii maintain_local_materii = new ServiciiMaterii();
 
             maintain_local_materii.setter_materi(local_vector);
             System.out.println();
@@ -189,7 +188,7 @@ public class Meniu {
         System.out.println();
         System.out.println();
 
-        //serviciiMaterii maintain_local_materii = new serviciiMaterii();
+        //ServiciiMaterii maintain_local_materii = new ServiciiMaterii();
 
         List<Student> listStudenti = new ArrayList<Student>(grupa.getStudenti());
         // maintain_local_materii.afisare_absente(listStudenti.get(0).getSituatie(),3);  /// pentru studentul 0, materia 3
@@ -210,7 +209,7 @@ public class Meniu {
 
     public void Meniu1(Grupa grupa_principala) {
 
-        serviciiGrupa serviciiGrupa = new serviciiGrupa();
+        ServiciiGrupa serviciiGrupa = new ServiciiGrupa();
 
         serviciiGrupa.setareMedieGrupa(grupa_principala);
         serviciiGrupa.setareRestantaGrupa(grupa_principala);
@@ -233,7 +232,7 @@ public class Meniu {
                 10) Stergeti un profesor
 
                 11) Afisati profesorii materiilor
-                
+                                
                 12) Afisati intreaga grupa in ordinea mediei
 
                 13) Cititi alta grupa
@@ -251,9 +250,9 @@ public class Meniu {
             System.out.println();
         }
 
-        serviciiGrupa servicii_grupa = new serviciiGrupa();
-        serviciiMaterii servicii_materii = new serviciiMaterii();
-        serviciiStudent servicii_student = new serviciiStudent();
+        ServiciiGrupa servicii_grupa = new ServiciiGrupa();
+        ServiciiMaterii servicii_materii = new ServiciiMaterii();
+        ServiciiStudent servicii_student = new ServiciiStudent();
         switch (raspuns) {
             case 1 -> {
                 System.out.println("Ati ales sa afisati intreaga grupa!");
@@ -694,13 +693,13 @@ public class Meniu {
                 Meniu1(grupa_principala);
             }
 
-            case 10 ->{
+            case 10 -> {
                 System.out.println("Ati ales sa stergeti un profesor de la o materie!");
                 System.out.println();
                 System.out.println("Alegeti materia: ");
                 servicii_materii.afisare_materii();
                 int numar_materie = var.nextInt();
-                if (numar_materie < 0 || numar_materie > 6){
+                if (numar_materie < 0 || numar_materie > 6) {
                     System.out.println("Optiune invalida!");
                     System.out.println();
                     System.out.println("La apasarea tastei ENTER va va trimite in meniul aplicatiei!");
@@ -712,8 +711,7 @@ public class Meniu {
                         }
                     }
                     Meniu1(grupa_principala);
-                }
-                else {
+                } else {
                     servicii_grupa.stergereProfesorMass(grupa_principala, numar_materie);
                 }
                 System.out.println();
@@ -731,7 +729,7 @@ public class Meniu {
             }
 
 
-            case 11 ->{
+            case 11 -> {
                 servicii_materii.afisareProfesori(grupa_principala.getStudenti().first().getSituatie());
                 System.out.println();
                 System.out.println("La apasarea tastei ENTER va va trimite in meniul aplicatiei!");
@@ -746,7 +744,7 @@ public class Meniu {
             }
 
 
-            case 12 ->{
+            case 12 -> {
 
                 System.out.println("Grupa ordonata dupa medie: ");
                 System.out.println();

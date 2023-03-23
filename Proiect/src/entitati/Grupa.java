@@ -3,34 +3,40 @@ package entitati;
 import java.util.TreeSet;
 
 public class Grupa {
-    private int numar_grupa;
-    private TreeSet<Student> studenti;
     private static int numar_studenti;
 
     static {
         numar_studenti = 0;
     }
-    public Grupa(Grupa x)
-    {
-        this.numar_grupa=x.numar_grupa;
-        this.studenti=x.studenti;
-        this.numar_studenti=x.numar_studenti;
+
+    private int numar_grupa;
+    private TreeSet<Student> studenti;
+
+    public Grupa(Grupa x) {
+        this.numar_grupa = x.numar_grupa;
+        this.studenti = x.studenti;
+        numar_studenti = numar_studenti;
     }
 
-    public Grupa(int nrgrupa)
-    {
-        studenti=new TreeSet<>();
-        numar_grupa=nrgrupa;
+    public Grupa(int nrgrupa) {
+        studenti = new TreeSet<>();
+        numar_grupa = nrgrupa;
     }
 
-    public void Adauga_Student(Student local)
-    {
+    public static int getNumar_studenti() {
+        return numar_studenti;
+    }
+
+    public static void setNumar_studenti(int numar_studenti) {
+        Grupa.numar_studenti = numar_studenti;
+    }
+
+    public void Adauga_Student(Student local) {
         studenti.add(local);
         numar_studenti++;
     }
 
-    public void Sterge_Student(Student local)
-    {
+    public void Sterge_Student(Student local) {
         studenti.remove(local);
         numar_studenti--;
     }
@@ -50,17 +56,6 @@ public class Grupa {
     public void setStudenti(TreeSet<Student> studenti) {
         this.studenti = studenti;
     }
-
-    public static int getNumar_studenti() {
-        return numar_studenti;
-    }
-
-    public static void setNumar_studenti(int numar_studenti) {
-        Grupa.numar_studenti = numar_studenti;
-    }
-
-
-
 
 
 }

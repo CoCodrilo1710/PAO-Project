@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.Objects;
 import java.util.Vector;
 
-public class Student extends Persoana implements Comparable<Student>{
+public class Student extends Persoana implements Comparable<Student> {
 
     private String studentEmail;
     private String NrTelefon;
@@ -17,12 +17,12 @@ public class Student extends Persoana implements Comparable<Student>{
 
     public Student() {
         super();
-        situatie=null;
+        situatie = null;
     }
 
     public Student(String cnp, String Prenume, String Nume, int age) {
         super(cnp, Prenume, Nume, age);
-        situatie=new Vector<>();
+        situatie = new Vector<>();
     }
 
 
@@ -32,8 +32,8 @@ public class Student extends Persoana implements Comparable<Student>{
         this.NrTelefon = NrTelefon;
         this.AndeStudiu = AndeStudiu;
         this.semestru = semestru;
-        this.situatie= new Vector<>();
-        this.medie=0.0D;
+        this.situatie = new Vector<>();
+        this.medie = 0.0D;
     }
 
     public String getStudentEmail() {
@@ -86,7 +86,7 @@ public class Student extends Persoana implements Comparable<Student>{
 
     @Override
     public String toString() {
-        return  "Student{" +
+        return "Student{" +
                 "cnp = " + cnp + '\'' +
                 ", Prenume=" + Prenume + '\'' +
                 ", Nume = " + Nume + '\'' +

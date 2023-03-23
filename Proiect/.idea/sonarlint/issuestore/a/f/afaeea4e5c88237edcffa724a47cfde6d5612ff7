@@ -1,19 +1,0 @@
-
-
-java:S1319I"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(©—‚8õí’€ğ0
-
-java:S1319Q"sThe return type of this method should be an interface such as "SortedSet" rather than the implementation "TreeSet".(—ÃÚ†8õí’€ğ0
-
-java:S1319a"dThe type of "note" should be an interface such as "List" rather than the implementation "ArrayList".(œïÿÛ8õí’€ğ0
-Œ
-java:S1319i"jThe type of "absente" should be an interface such as "SortedSet" rather than the implementation "TreeSet".(éÖÆöşÿÿÿÿ8õí’€ğ0
-m
-java:S1104"PMake nota a static final constant or non-public and provide accessors if needed.(çêš”8öí’€ğ0
-m
-java:S1104"PMake Data a static final constant or non-public and provide accessors if needed.(œÀ¸Ç8öí’€ğ0
-n	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(àëÅ‰øÿÿÿÿ8öí’€ğ0
-v	java:S115
-"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ßŸıº8ùí’€ğ0
-{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¶Áß‘ûÿÿÿÿ8ùí’€ğ0
-v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(óøôô8ùí’€ğ0
-k	java:S116"ORename this field "Data" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œÀ¸Ç8úí’€ğ0

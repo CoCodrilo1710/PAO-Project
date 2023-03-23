@@ -6,44 +6,16 @@ import java.util.TreeSet;
 
 public class Materie {
 
-    public class forma{
-        private int nota;
-        private LocalDate Data;
-
-
-    }
-
-    public int getter_nota(forma x)
-    {
-        return x.nota;
-    }
-
-    public LocalDate getter_data(forma x)
-    {
-        return x.Data;
-    }
-
     private Profesor profesor;
-    private allMaterii numeMaterie;
+    private AllMaterii numeMaterie;
     private int credite;
     private int nrAbsente;
     private int nrNote;
-
     private double medie;
-    private ArrayList<forma>  note;
+    private ArrayList<forma> note;
     private boolean restanta;
     private TreeSet<LocalDate> absente;
-
-    public forma get_forma(int local_nota, LocalDate local_data)
-    {
-        forma aici = new forma();
-        aici.Data=local_data;
-        aici.nota=local_nota;
-
-        return aici;
-    }
-
-    public Materie(allMaterii numeMaterie, int credite, int nrAbsente, int nrNote, boolean restanta) {
+    public Materie(AllMaterii numeMaterie, int credite, int nrAbsente, int nrNote, boolean restanta) {
         this.numeMaterie = numeMaterie;
         this.credite = credite;
         this.nrAbsente = nrAbsente;
@@ -52,9 +24,7 @@ public class Materie {
         this.absente = new TreeSet<>();
         this.note = new ArrayList<>();
     }
-
-    public Materie()
-    {
+    public Materie() {
         this.numeMaterie = null;
         this.credite = 0;
         this.nrAbsente = 0;
@@ -63,6 +33,23 @@ public class Materie {
         this.absente = new TreeSet<>();
         this.note = new ArrayList<>();
     }
+
+    public int getter_nota(forma x) {
+        return x.nota;
+    }
+
+    public LocalDate getter_data(forma x) {
+        return x.Data;
+    }
+
+    public forma get_forma(int local_nota, LocalDate local_data) {
+        forma aici = new forma();
+        aici.Data = local_data;
+        aici.nota = local_nota;
+
+        return aici;
+    }
+
     public double getMedie() {
         return medie;
     }
@@ -73,6 +60,10 @@ public class Materie {
 
     public int getCredite() {
         return credite;
+    }
+
+    public void setCredite(int credite) {
+        this.credite = credite;
     }
 
     public Profesor getProfesor() {
@@ -87,12 +78,24 @@ public class Materie {
         return nrAbsente;
     }
 
+    public void setNrAbsente(int nrAbsente) {
+        this.nrAbsente = nrAbsente;
+    }
+
     public int getNrNote() {
         return nrNote;
     }
 
+    public void setNrNote(int nrNote) {
+        this.nrNote = nrNote;
+    }
+
     public ArrayList<forma> getNote() {
         return note;
+    }
+
+    public void setNote(ArrayList<forma> note) {
+        this.note = note;
     }
 
     public boolean isRestanta() {
@@ -103,40 +106,31 @@ public class Materie {
         return absente;
     }
 
-    public void setCredite(int credite) {
-        this.credite = credite;
-    }
-
-    public void setNrAbsente(int nrAbsente) {
-        this.nrAbsente = nrAbsente;
-    }
-
-    public void setNrNote(int nrNote) {
-        this.nrNote = nrNote;
-    }
-
-    public void setNote(ArrayList<forma> note) {
-        this.note = note;
-    }
-
-    public void setRestanta(boolean restanta) {
-        this.restanta = restanta;
+    public void setAbsente(TreeSet<LocalDate> absente) {
+        this.absente = absente;
     }
 
     public boolean getRestanta() {
         return restanta;
     }
 
-    public void setAbsente(TreeSet<LocalDate> absente) {
-        this.absente = absente;
+    public void setRestanta(boolean restanta) {
+        this.restanta = restanta;
     }
 
-    public allMaterii getNumeMaterie() {
+    public AllMaterii getNumeMaterie() {
         return numeMaterie;
     }
 
-    public void setNumeMaterie(allMaterii numeMaterie) {
+    public void setNumeMaterie(AllMaterii numeMaterie) {
         this.numeMaterie = numeMaterie;
+    }
+
+    public class forma {
+        private int nota;
+        private LocalDate Data;
+
+
     }
 
 }
