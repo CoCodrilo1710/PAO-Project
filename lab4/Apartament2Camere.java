@@ -3,7 +3,5 @@ public class Apartament2Camere extends Apartament{
     {
         super();
         this.setNrDormitoare(2);
-
-
     }
 }

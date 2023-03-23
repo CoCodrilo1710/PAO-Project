@@ -1,9 +1,9 @@
 public class Duplex extends Apartament{
-    private Integer nrEtaje;
+    private final Integer nrEtaje;
 
-    public Duplex(Integer nrEtaj)
+    public Duplex(Integer nrEtaje)
     {
         super();
-        nrEtaje=nrEtaj;
+        this.nrEtaje = nrEtaje;
     }
 }

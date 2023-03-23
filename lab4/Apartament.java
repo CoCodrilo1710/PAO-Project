@@ -4,13 +4,7 @@ public class Apartament {
     private double dimensiune;
     private String data;
     private int nrDormitoare;
-    enum nrBai
-    {
-        o_baie, doua_bai
-    }
-
     private nrBai varNrBai;
-
 
     public Apartament(int numar, double pret, double dimensiune, String data, int nrDormitoare, int nrBai) {
         this.numar = numar;
@@ -19,13 +13,13 @@ public class Apartament {
         this.data = data;
         this.nrDormitoare = nrDormitoare;
     }
-    public Apartament()
-    {
-        numar=0;
-        pret=0D;
-        dimensiune=0D;
-        data="01.01.1900";
-        nrDormitoare=0;
+
+    public Apartament() {
+        this.numar = 0;
+        this.pret = 0D;
+        this.dimensiune = 0D;
+        this.data = "01.01.1900";
+        this.nrDormitoare = 0;
     }
 
     // Getteri si setteri pentru variabilele private
@@ -68,7 +62,4 @@ public class Apartament {
     public void setNrDormitoare(int nrDormitoare) {
         this.nrDormitoare = nrDormitoare;
     }
-
-
-
 }
