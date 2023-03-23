@@ -1,9 +1,13 @@
 package Servicii;
 
+import entitati.Profesor;
+import entitati.Student;
 import entitati.allMaterii;
 import entitati.Materie;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
 
 public class serviciiMaterii {
@@ -65,5 +69,64 @@ public class serviciiMaterii {
                 System.out.println(localDate.getDayOfMonth() + ".0" + localDate.getMonthValue());
         }
     }
+
+
+    public int returnPozitieNota(Vector<Materie> local, int materie, int nota, LocalDate data)
+    {
+        int i=0;
+        if (local.get(materie).getNote().size() == 0)
+            return -1;
+        for (i=0;i<=local.get(materie).getNote().size();i++)
+        {
+            if (local.get(materie).getter_nota(local.get(materie).getNote().get(i))==nota && local.get(materie).getter_data(local.get(materie).getNote().get(i)).equals(data))
+                return i;
+        }
+        return -1;
+    }
+    public void removeNotaByNota(Vector<Materie> local, int materie, int nota, LocalDate data)
+    {
+        local.get(materie).getNote().remove(returnPozitieNota(local,materie,nota,data));
+    }
+
+    public int returnPozitieAbsenta(Vector<Materie> local, int materie, LocalDate data)
+    {
+        int i=0;
+        if (local.get(materie).getAbsente().size() == 0)
+            return -1;
+
+        for (i=0;i<=local.get(materie).getAbsente().size();i++)
+        {
+
+            ArrayList<LocalDate> listaAbsente = new ArrayList<LocalDate>( local.get(materie).getAbsente() );
+            if (listaAbsente.get(i).equals(data))
+                return i;
+        }
+        return -1;
+    }
+
+    public void removeAbsentaByData(Vector<Materie> local, int materie, LocalDate data)
+    {
+        local.get(materie).getAbsente().remove(returnPozitieAbsenta(local,materie,data));
+    }
+
+    public void seteazaProfesor(Profesor x, Vector<Materie> local, int materie)
+    {
+        local.get(materie).setProfesor(x);
+    }
+
+    public void afisareProfesori(Vector<Materie> local)
+    {
+        serviciiProfesori serviciiProfesori = new serviciiProfesori();
+        for (Materie materie : local) {
+            if (materie.getProfesor() != null) {
+                System.out.println("Profesorul pentru materia " + materie.getNumeMaterie() + " este:  \n");
+                serviciiProfesori.afisareProfesor(materie.getProfesor());
+            }
+            else
+                System.out.println("Nu exista profesor pentru materia " + materie.getNumeMaterie());
+            System.out.println("----------------------------------------------------");
+        }
+    }
+
 }
 

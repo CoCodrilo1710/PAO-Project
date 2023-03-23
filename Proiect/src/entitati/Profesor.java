@@ -3,7 +3,7 @@ package entitati;
 import java.util.Objects;
 
 public class Profesor extends Persoana{
-    private int id;
+    private static int id;
     private String Email;
     private int Salariu;
     private String Rank;
@@ -17,6 +17,7 @@ public class Profesor extends Persoana{
         this.Email = Email;
         this.Salariu = Salariu;
         this.Rank = Rank;
+        id++;
     }
 
     public Profesor(String cnp, String Prenume, String Nume, String Email, String Rank, int Salariu) {
@@ -24,9 +25,12 @@ public class Profesor extends Persoana{
         this.Email = Email;
         this.Rank = Rank;
         this.Salariu = Salariu;
-
+        id++;
     }
 
+    public static int getterId() {
+        return id;
+    }
 
     public String getEmail() {
         return Email;
@@ -50,20 +54,6 @@ public class Profesor extends Persoana{
 
     public void setRank(String Rank) {
         this.Rank = Rank;
-    }
-    
-    
-    @Override
-    public String toString() {
-        return "Profesor{" +
-                "cnp=" + cnp + '\'' +
-                ", first Name=" + Prenume + '\'' +
-                ", last Name=" + Nume + '\'' +
-                ", age=" + age +
-                ", Profesor Email=" + Email + '\'' +
-                ", Salariu=" + Salariu + '\'' +
-                ", academic rank=" + Rank +
-                '}';
     }
 
     @Override

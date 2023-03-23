@@ -115,6 +115,6 @@ public class Student extends Persoana implements Comparable<Student>{
 
     @Override
     public int compareTo(Student o) {
-        return Comparator.comparing(Student::getNume).thenComparing(Student::getPrenume).compare(this, o);
+        return Comparator.comparing(Student::getMedie).thenComparing(Student::getMedie).compare(this, o);
     }
 }

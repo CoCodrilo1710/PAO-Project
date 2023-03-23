@@ -123,6 +123,10 @@ public class Materie {
         this.restanta = restanta;
     }
 
+    public boolean getRestanta() {
+        return restanta;
+    }
+
     public void setAbsente(TreeSet<LocalDate> absente) {
         this.absente = absente;
     }

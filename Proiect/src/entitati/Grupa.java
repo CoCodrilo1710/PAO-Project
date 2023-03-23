@@ -10,6 +10,12 @@ public class Grupa {
     static {
         numar_studenti = 0;
     }
+    public Grupa(Grupa x)
+    {
+        this.numar_grupa=x.numar_grupa;
+        this.studenti=x.studenti;
+        this.numar_studenti=x.numar_studenti;
+    }
 
     public Grupa(int nrgrupa)
     {

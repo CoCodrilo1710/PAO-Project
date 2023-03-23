@@ -3,6 +3,8 @@ package Servicii;
 import entitati.Materie;
 import entitati.Student;
 
+import java.time.LocalDate;
+
 public class serviciiStudent {
 
     public void setMedieStudent(Student x)
@@ -60,6 +62,50 @@ public class serviciiStudent {
                 x.getSituatie().get(x.getSituatie().indexOf(y)).setRestanta(false);
             }
         }
+    }
+
+    public void afisareStudent(Student x)
+    {
+        System.out.println("Numele este: "+x.getNume());
+        System.out.println("Prenumele este: "+x.getPrenume());
+        System.out.println("CNP-ul este: "+x.getCnp());
+        System.out.println("Varsta este: "+x.getAge());
+        System.out.println("Media este: "+x.getMedie());
+        System.out.println();
+        System.out.println();
+
+        System.out.println("Notele/Absentele sale sunt urmatoarele: ");
+        System.out.println();
+        for (Materie mat: x.getSituatie() ) {
+
+            System.out.println("Materia: --- "+mat.getNumeMaterie()+ " ---");
+            System.out.println("Note: ");
+            for (Materie.forma forma: mat.getNote() ) {
+                System.out.println("Nota: "+mat.getter_nota(forma)+" ,    Data: " + mat.getter_data(forma).getDayOfMonth()+"."+mat.getter_data(forma).getMonthValue());
+                System.out.println();
+            }
+            System.out.println();
+            System.out.println("Absente: ");
+            for (LocalDate data: mat.getAbsente() ) {
+                System.out.println(data.getDayOfMonth()+"."+data.getMonthValue());
+                System.out.println();
+            }
+            System.out.println();
+            System.out.println();
+            System.out.println();
+        }
+    }
+
+    public void adaugaNota(Student x, int y, int nota, LocalDate data)
+    {
+        serviciiMaterii mainMaterii = new serviciiMaterii();
+        mainMaterii.add_nota(x.getSituatie(),y ,nota, data);
+    }
+
+    public void stergeNota(Student x, int y, int nota, LocalDate data)
+    {
+        serviciiMaterii mainMaterii = new serviciiMaterii();
+        mainMaterii.removeNotaByNota(x.getSituatie(),y ,nota, data);
     }
 
 
