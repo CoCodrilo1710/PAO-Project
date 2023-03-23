@@ -14,7 +14,6 @@ import java.util.Scanner;
 import java.util.Vector;
 
 public class Meniu {
-    // private Grupa grupa;
 
     public void firstRead() {
         Scanner var = new Scanner(System.in);
@@ -22,7 +21,6 @@ public class Meniu {
         System.out.println("--------- Introduceti datele despre grupa!----------");
         System.out.println();
         System.out.println();
-
         System.out.print("Numarul grupei este:  ");
         int key_int = var.nextInt();
         System.out.println();
@@ -69,29 +67,25 @@ public class Meniu {
             int semestru = var.nextInt();
 
             Student local = new Student(cnp, prenume, nume, varsta, email, nrdetel, andestudiu, semestru);
-
-            Vector<Materie> local_vector = new Vector<Materie>();
+            Vector<Materie> localVector = new Vector<Materie>();
 
             System.out.println();
             System.out.println();
-
             System.out.println("Specificati numarul de note pe care doriti sa-l adaugati: \n(O sa alegeti pentru fiecare nota in parte la ce materie sa o adaugati)");
-            int nrnote_local = var.nextInt();
+            int nrnoteLocal = var.nextInt();
 
-            ServiciiMaterii maintain_local_materii = new ServiciiMaterii();
-
-            maintain_local_materii.setter_materi(local_vector);
+            ServiciiMaterii maintainLocalMaterii = new ServiciiMaterii();
+            maintainLocalMaterii.setterMateri(localVector);
             System.out.println();
             System.out.println();
 
-            if (nrnote_local <= 0) {
+            if (nrnoteLocal <= 0) {
                 System.out.println("Nu ati introdus nicio nota");
             } else
                 System.out.println("Notele trebuie introduse sub forma: nota ( urmata de tasta ENTER), iar mai apoi data(sub forma: zz.ll)");
             System.out.println();
 
-
-            for (int i2 = 0; i2 < nrnote_local; i2++) {
+            for (int i2 = 0; i2 < nrnoteLocal; i2++) {
                 System.out.println("Introduceti nota #" + i2 + ": ");
                 int nota = var.nextInt();
                 String data = var.next();
@@ -106,26 +100,23 @@ public class Meniu {
                 LocalDate final1 = LocalDate.parse(data, formatter);
 
                 System.out.println("\n \nVa rugam alegeti materia la care doriti sa adaugati nota: \n Scrieti doar cifra corespunzatoare! \n");
-                maintain_local_materii.afisare_materii();
+                maintainLocalMaterii.afisareMaterii();
                 int optiune = var.nextInt();
 
-                maintain_local_materii.add_nota(local_vector, optiune, nota, final1);
+                maintainLocalMaterii.add_nota(localVector, optiune, nota, final1);
 
                 System.out.println();
-                System.out.println("Ati adaugat cu succes nota " + nota + "/" + backData + " la materia ------ " + maintain_local_materii.nume_materie(local_vector, optiune) + " ------");
-
+                System.out.println("Ati adaugat cu succes nota " + nota + "/" + backData + " la materia ------ " + maintainLocalMaterii.numeMaterie(localVector, optiune) + " ------");
                 System.out.println();
                 System.out.println();
                 System.out.println();
 
 
             }
-
             System.out.println();
             System.out.println();
             System.out.println();
             System.out.println("Apasati tasta ENTER pentru a adauga absentele, ecranul se va goli!");
-
             String temp = var.nextLine();
             key = var.nextLine();
             if (key.equals("")) {
@@ -134,21 +125,19 @@ public class Meniu {
                     System.out.println();
                 }
             }
-
             //      System.out.println(maintain_local_materii.return_nota(local_vector,4,0));   // printare nota
 
-
             System.out.println("Specificati numarul de ABSENTE pe care doriti sa-l adaugati: \n(O sa alegeti pentru fiecare ABSENTA in parte la ce materie sa o adaugati)");
-            int nrabsente_local = var.nextInt();
+            int nrabsenteLocal = var.nextInt();
             System.out.println();
 
             System.out.println();
-            if (nrabsente_local == 0)
+            if (nrabsenteLocal == 0)
                 System.out.println("Nu ati introdus nicio absenta!");
             else
                 System.out.println("Absentele trebuiesc introduse sub forma zz.dd ! Dupa fiecare absenta apsati tasta ENTER");
 
-            for (int i3 = 0; i3 < nrabsente_local; i3++) {
+            for (int i3 = 0; i3 < nrabsenteLocal; i3++) {
 
                 System.out.println("Introduceti data absentei #" + i3 + ": ");
                 String data = var.next();
@@ -162,13 +151,13 @@ public class Meniu {
                 LocalDate final1 = LocalDate.parse(data, formatter);
 
                 System.out.println("\n \nVa rugam alegeti materia la care doriti sa adaugati ABSENTA: \n Scrieti doar cifra corespunzatoare! \n");
-                maintain_local_materii.afisare_materii();
+                maintainLocalMaterii.afisareMaterii();
                 int optiune = var.nextInt();
 
-                maintain_local_materii.add_absenta(local_vector, optiune, final1);
+                maintainLocalMaterii.addAbsenta(localVector, optiune, final1);
 
                 System.out.println();
-                System.out.println("Ati adaugat cu succes ABSENTA " + backData + " la materia ------ " + maintain_local_materii.nume_materie(local_vector, optiune) + " ------");
+                System.out.println("Ati adaugat cu succes ABSENTA " + backData + " la materia ------ " + maintainLocalMaterii.numeMaterie(localVector, optiune) + " ------");
 
                 System.out.println();
                 System.out.println();
@@ -181,15 +170,12 @@ public class Meniu {
             System.out.println();
             System.out.println();
 
-            local.setSituatie(local_vector);
+            local.setSituatie(localVector);
             grupa.Adauga_Student(local);
 
         }
         System.out.println();
         System.out.println();
-
-        //ServiciiMaterii maintain_local_materii = new ServiciiMaterii();
-
         List<Student> listStudenti = new ArrayList<Student>(grupa.getStudenti());
         // maintain_local_materii.afisare_absente(listStudenti.get(0).getSituatie(),3);  /// pentru studentul 0, materia 3
 
@@ -202,17 +188,14 @@ public class Meniu {
                 System.out.println();
             }
         }
-
         Meniu1(grupa);
     }
 
-
-    public void Meniu1(Grupa grupa_principala) {
+    public void Meniu1(Grupa grupaPrincipala) {
 
         ServiciiGrupa serviciiGrupa = new ServiciiGrupa();
-
-        serviciiGrupa.setareMedieGrupa(grupa_principala);
-        serviciiGrupa.setareRestantaGrupa(grupa_principala);
+        serviciiGrupa.setareMedieGrupa(grupaPrincipala);
+        serviciiGrupa.setareRestantaGrupa(grupaPrincipala);
 
         System.out.println("""
                     
@@ -249,10 +232,9 @@ public class Meniu {
         for (int iii = 0; iii < numRowsInConsole; iii++) {
             System.out.println();
         }
-
-        ServiciiGrupa servicii_grupa = new ServiciiGrupa();
-        ServiciiMaterii servicii_materii = new ServiciiMaterii();
-        ServiciiStudent servicii_student = new ServiciiStudent();
+        ServiciiGrupa serviciiGrupa1 = new ServiciiGrupa();
+        ServiciiMaterii serviciiMaterii = new ServiciiMaterii();
+        ServiciiStudent serviciiStudent = new ServiciiStudent();
         switch (raspuns) {
             case 1 -> {
                 System.out.println("Ati ales sa afisati intreaga grupa!");
@@ -260,7 +242,7 @@ public class Meniu {
                 System.out.println();
                 System.out.println();
                 System.out.println();
-                servicii_grupa.afisareGrupa(grupa_principala);
+                serviciiGrupa1.afisareGrupa(grupaPrincipala);
                 System.out.println();
                 System.out.println();
                 System.out.println("Afisarea s-a terminat! \nLa apasarea tastei ENTER va va trimite in meniul aplicatiei!");
@@ -271,14 +253,10 @@ public class Meniu {
                         System.out.println();
                     }
                 }
-
-                Meniu1(grupa_principala);
-
+                Meniu1(grupaPrincipala);
             }
 
-
             case 2 -> {
-
                 System.out.println("Ati ales sa afisati detaliile despre un anumit student!");
                 System.out.println("Introduceti numele studentului: ");
                 String nume = var.next();
@@ -286,9 +264,9 @@ public class Meniu {
                 String prenume = var.next();
                 System.out.println();
 
-                if (servicii_grupa.exitaStudent(grupa_principala, nume, prenume)) {
-                    Student ty = servicii_grupa.getStudentByName(grupa_principala, nume, prenume);
-                    servicii_student.afisareStudent(ty);
+                if (serviciiGrupa1.exitaStudent(grupaPrincipala, nume, prenume)) {
+                    Student ty = serviciiGrupa1.getStudentByName(grupaPrincipala, nume, prenume);
+                    serviciiStudent.afisareStudent(ty);
                     System.out.println();
                     System.out.println();
                     System.out.println("Afisarea s-a terminat! \nLa apasarea tastei ENTER va va trimite in meniul aplicatiei!");
@@ -300,7 +278,8 @@ public class Meniu {
                         }
                     }
 
-                    Meniu1(grupa_principala);
+                    Meniu1(grupaPrincipala);
+
                 } else {
                     System.out.println("Nu exista niciun student cu numele si prenumele introduse!");
                     System.out.println();
@@ -313,11 +292,10 @@ public class Meniu {
                             System.out.println();
                         }
                     }
-
-                    Meniu1(grupa_principala);
+                    Meniu1(grupaPrincipala);
                 }
-
             }
+
             case 3 -> {
                 System.out.println("Ati ales sa adaugati note unui anumit student!");
                 System.out.println("Introduceti numele studentului: ");
@@ -326,15 +304,15 @@ public class Meniu {
                 String prenume = var.next();
                 System.out.println();
 
-                if (servicii_grupa.exitaStudent(grupa_principala, nume, prenume)) {
+                if (serviciiGrupa1.exitaStudent(grupaPrincipala, nume, prenume)) {
 
-                    Student ty = servicii_grupa.getStudentByName(grupa_principala, nume, prenume);
+                    Student ty = serviciiGrupa1.getStudentByName(grupaPrincipala, nume, prenume);
 
                     System.out.println("Cate note doriti sa adaugati? ");
                     int numar_note = var.nextInt();
                     for (int ii = 0; ii < numar_note; ii++) {
 
-                        servicii_materii.afisare_materii();
+                        serviciiMaterii.afisareMaterii();
                         System.out.println("Introduceti numarul materiei pentru nota pe care doriti sa o adaugati: ");
                         int numar_materie = var.nextInt();
                         System.out.println("Introduceti nota: ");
@@ -346,7 +324,7 @@ public class Meniu {
                         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.uuuu");
                         LocalDate final1 = LocalDate.parse(data, formatter);
 
-                        servicii_student.adaugaNota(ty, numar_materie, nota, final1);
+                        serviciiStudent.adaugaNota(ty, numar_materie, nota, final1);
                         System.out.println();
                         System.out.println();
                     }
@@ -362,8 +340,7 @@ public class Meniu {
                             System.out.println();
                         }
                     }
-
-                    Meniu1(grupa_principala);
+                    Meniu1(grupaPrincipala);
                 } else {
                     System.out.println("Nu exista niciun student cu numele si prenumele introduse!");
                     System.out.println();
@@ -376,10 +353,8 @@ public class Meniu {
                             System.out.println();
                         }
                     }
-
-                    Meniu1(grupa_principala);
+                    Meniu1(grupaPrincipala);
                 }
-
             }
 
             case 4 -> {
@@ -390,17 +365,17 @@ public class Meniu {
                 String prenume = var.next();
                 System.out.println();
                 int ok = 0;
-                if (servicii_grupa.exitaStudent(grupa_principala, nume, prenume)) {
+                if (serviciiGrupa1.exitaStudent(grupaPrincipala, nume, prenume)) {
 
-                    Student ty = servicii_grupa.getStudentByName(grupa_principala, nume, prenume);
+                    Student ty = serviciiGrupa1.getStudentByName(grupaPrincipala, nume, prenume);
 
                     System.out.println("Cate note doriti sa stergeti? ");
                     int numar_note = var.nextInt();
                     for (int ii = 0; ii < numar_note; ii++) {
 
-                        servicii_materii.afisare_materii();
+                        serviciiMaterii.afisareMaterii();
                         System.out.println("Introduceti numarul materiei pentru nota pe care doriti sa o stergeti: ");
-                        int numar_materie = var.nextInt();
+                        int numarMaterie = var.nextInt();
                         System.out.println("Introduceti nota: ");
                         int nota = var.nextInt();
                         System.out.println("Introduceti data: (sub forma zz.ll");
@@ -410,13 +385,12 @@ public class Meniu {
                         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.uuuu");
                         LocalDate final1 = LocalDate.parse(data, formatter);
 
-                        if (servicii_materii.returnPozitieNota(ty.getSituatie(), numar_materie, nota, final1) == -1)
+                        if (serviciiMaterii.returnPozitieNota(ty.getSituatie(), numarMaterie, nota, final1) == -1)
                             System.out.println("Nota nu a fost gasita!");
                         else {
-                            servicii_student.stergeNota(ty, numar_materie, nota, final1);
+                            serviciiStudent.stergeNota(ty, numarMaterie, nota, final1);
                             ok = 1;
                         }
-
 
                         System.out.println();
                         System.out.println();
@@ -434,7 +408,7 @@ public class Meniu {
                         }
                     }
 
-                    Meniu1(grupa_principala);
+                    Meniu1(grupaPrincipala);
                 } else {
                     System.out.println("Nu exista niciun student cu numele si prenumele introduse!");
                     System.out.println();
@@ -448,30 +422,26 @@ public class Meniu {
                         }
                     }
                 }
-
-
             }
 
-
             case 5 -> {
-
                 System.out.println("Ati ales sa adaugati absente unui anumit student!");
                 System.out.println("Introduceti numele studentului: ");
                 String nume = var.next();
                 System.out.println("Introduceti prenumele studentului: ");
                 String prenume = var.next();
                 System.out.println();
-                if (servicii_grupa.exitaStudent(grupa_principala, nume, prenume)) {
+                if (serviciiGrupa1.exitaStudent(grupaPrincipala, nume, prenume)) {
 
-                    Student ty = servicii_grupa.getStudentByName(grupa_principala, nume, prenume);
+                    Student ty = serviciiGrupa1.getStudentByName(grupaPrincipala, nume, prenume);
 
                     System.out.println("Cate absente doriti sa adaugati? ");
                     int numar_absente = var.nextInt();
                     for (int ii = 0; ii < numar_absente; ii++) {
 
-                        servicii_materii.afisare_materii();
+                        serviciiMaterii.afisareMaterii();
                         System.out.println("Introduceti numarul materiei pentru absenta pe care doriti sa o adaugati: ");
-                        int numar_materie = var.nextInt();
+                        int numarMaterie = var.nextInt();
                         System.out.println("Introduceti data: (sub forma zz.ll");
                         String data = var.next();
 
@@ -479,7 +449,7 @@ public class Meniu {
                         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.uuuu");
                         LocalDate final1 = LocalDate.parse(data, formatter);
 
-                        servicii_materii.add_absenta(ty.getSituatie(), numar_materie, final1);
+                        serviciiMaterii.addAbsenta(ty.getSituatie(), numarMaterie, final1);
                         System.out.println();
                         System.out.println();
                     }
@@ -495,8 +465,7 @@ public class Meniu {
                             System.out.println();
                         }
                     }
-
-                    Meniu1(grupa_principala);
+                    Meniu1(grupaPrincipala);
                 } else {
                     System.out.println("Nu exista niciun student cu numele si prenumele introduse!");
                     System.out.println();
@@ -510,7 +479,6 @@ public class Meniu {
                         }
                     }
                 }
-
             }
 
             case 6 -> {
@@ -523,17 +491,17 @@ public class Meniu {
                 String prenume = var.next();
                 System.out.println();
                 int ok = 0;
-                if (servicii_grupa.exitaStudent(grupa_principala, nume, prenume)) {
+                if (serviciiGrupa1.exitaStudent(grupaPrincipala, nume, prenume)) {
 
-                    Student ty = servicii_grupa.getStudentByName(grupa_principala, nume, prenume);
+                    Student ty = serviciiGrupa1.getStudentByName(grupaPrincipala, nume, prenume);
 
                     System.out.println("Cate absente doriti sa stergeti? ");
-                    int numar_absente = var.nextInt();
-                    for (int ii = 0; ii < numar_absente; ii++) {
+                    int numarAbsente = var.nextInt();
+                    for (int ii = 0; ii < numarAbsente; ii++) {
 
-                        servicii_materii.afisare_materii();
+                        serviciiMaterii.afisareMaterii();
                         System.out.println("Introduceti numarul materiei pentru absenta pe care doriti sa o stergeti: ");
-                        int numar_materie = var.nextInt();
+                        int numarMaterie = var.nextInt();
                         System.out.println("Introduceti data: (sub forma zz.ll");
                         String data = var.next();
 
@@ -541,16 +509,16 @@ public class Meniu {
                         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.uuuu");
                         LocalDate final1 = LocalDate.parse(data, formatter);
 
-                        if (servicii_materii.returnPozitieAbsenta(ty.getSituatie(), numar_materie, final1) == -1)
+                        if (serviciiMaterii.returnPozitieAbsenta(ty.getSituatie(), numarMaterie, final1) == -1)
                             System.out.println("Absenta nu a fost gasita!");
                         else {
-                            servicii_materii.removeAbsentaByData(ty.getSituatie(), numar_materie, final1);
+                            serviciiMaterii.removeAbsentaByData(ty.getSituatie(), numarMaterie, final1);
                             ok = 1;
                         }
                         System.out.println();
                         System.out.println();
                     }
-                    if (numar_absente > 0 && ok == 1)
+                    if (numarAbsente > 0 && ok == 1)
                         System.out.println("Stergerea a fost efectuata pe absentele gasite! \nLa apasarea tastei ENTER va va trimite in meniul aplicatiei!");
                     else
                         System.out.println("Nu ati introdus nicio absenta! \nLa apasarea tastei ENTER va va trimite in meniul aplicatiei!");
@@ -562,7 +530,7 @@ public class Meniu {
                             System.out.println();
                         }
                     }
-                    Meniu1(grupa_principala);
+                    Meniu1(grupaPrincipala);
                 } else {
                     System.out.println("Nu exista niciun student cu numele si prenumele introduse!");
                     System.out.println();
@@ -588,8 +556,8 @@ public class Meniu {
                 System.out.println();
                 Student x = null;
 
-                if (servicii_grupa.exitaStudent(grupa_principala, nume, prenume)) {
-                    x = servicii_grupa.getStudentByName(grupa_principala, nume, prenume);
+                if (serviciiGrupa1.exitaStudent(grupaPrincipala, nume, prenume)) {
+                    x = serviciiGrupa1.getStudentByName(grupaPrincipala, nume, prenume);
                 }
 
                 if (x != null) {
@@ -613,7 +581,6 @@ public class Meniu {
                     System.out.print("Reincercati! ");
                 }
 
-
                 System.out.println("La apasarea tastei ENTER va va trimite in meniul aplicatiei!");
                 String temp1 = var.nextLine();
                 String key = var.nextLine();
@@ -622,16 +589,13 @@ public class Meniu {
                         System.out.println();
                     }
                 }
-                Meniu1(grupa_principala);
-
+                Meniu1(grupaPrincipala);
             }
 
             case 8 -> {
                 System.out.println("Ati ales sa aflati numarul de restantieri din intreaga grupa!");
                 System.out.println();
-
-                System.out.println("Numarul de restantieri din intreaga grupa este: " + servicii_grupa.returnNrRestanti(grupa_principala));
-
+                System.out.println("Numarul de restantieri din intreaga grupa este: " + serviciiGrupa1.returnNrRestanti(grupaPrincipala));
                 System.out.println();
                 System.out.println();
                 System.out.println("La apasarea tastei ENTER va va trimite in meniul aplicatiei!");
@@ -642,16 +606,16 @@ public class Meniu {
                         System.out.println();
                     }
                 }
-                Meniu1(grupa_principala);
+                Meniu1(grupaPrincipala);
             }
 
             case 9 -> {
                 System.out.println("Ati ales sa adaugati un profesor la o materie!");
                 System.out.println();
                 System.out.println("Alegeti materia: ");
-                servicii_materii.afisare_materii();
-                int numar_materie = var.nextInt();
-                if (numar_materie < 0 || numar_materie > 6) {
+                serviciiMaterii.afisareMaterii();
+                int numarMaterie = var.nextInt();
+                if (numarMaterie < 0 || numarMaterie > 6) {
                     System.out.println("Optiune invalida!");
                     System.out.println();
                     System.out.println("La apasarea tastei ENTER va va trimite in meniul aplicatiei!");
@@ -662,7 +626,7 @@ public class Meniu {
                             System.out.println();
                         }
                     }
-                    Meniu1(grupa_principala);
+                    Meniu1(grupaPrincipala);
                 } else {
                     System.out.println("Introduceti numele profesorului: ");
                     String nume = var.next();
@@ -677,7 +641,7 @@ public class Meniu {
                     System.out.println("Introduceti rank-ul profesorului: ");
                     String rank = var.next();
                     Profesor x = new Profesor(cnp, prenume, nume, email, rank, salariu);
-                    servicii_grupa.setareProfesorMass(grupa_principala, x, numar_materie);
+                    serviciiGrupa1.setareProfesorMass(grupaPrincipala, x, numarMaterie);
                 }
                 System.out.println();
                 System.out.println("Modificarea a fost facuta cu succes!");
@@ -690,16 +654,16 @@ public class Meniu {
                         System.out.println();
                     }
                 }
-                Meniu1(grupa_principala);
+                Meniu1(grupaPrincipala);
             }
 
             case 10 -> {
                 System.out.println("Ati ales sa stergeti un profesor de la o materie!");
                 System.out.println();
                 System.out.println("Alegeti materia: ");
-                servicii_materii.afisare_materii();
-                int numar_materie = var.nextInt();
-                if (numar_materie < 0 || numar_materie > 6) {
+                serviciiMaterii.afisareMaterii();
+                int numarMaterie = var.nextInt();
+                if (numarMaterie < 0 || numarMaterie > 6) {
                     System.out.println("Optiune invalida!");
                     System.out.println();
                     System.out.println("La apasarea tastei ENTER va va trimite in meniul aplicatiei!");
@@ -710,9 +674,9 @@ public class Meniu {
                             System.out.println();
                         }
                     }
-                    Meniu1(grupa_principala);
+                    Meniu1(grupaPrincipala);
                 } else {
-                    servicii_grupa.stergereProfesorMass(grupa_principala, numar_materie);
+                    serviciiGrupa1.stergereProfesorMass(grupaPrincipala, numarMaterie);
                 }
                 System.out.println();
                 System.out.println("Modificarea a fost facuta cu succes!");
@@ -725,12 +689,11 @@ public class Meniu {
                         System.out.println();
                     }
                 }
-                Meniu1(grupa_principala);
+                Meniu1(grupaPrincipala);
             }
 
-
             case 11 -> {
-                servicii_materii.afisareProfesori(grupa_principala.getStudenti().first().getSituatie());
+                serviciiMaterii.afisareProfesori(grupaPrincipala.getStudenti().first().getSituatie());
                 System.out.println();
                 System.out.println("La apasarea tastei ENTER va va trimite in meniul aplicatiei!");
                 String temp1 = var.nextLine();
@@ -740,15 +703,14 @@ public class Meniu {
                         System.out.println();
                     }
                 }
-                Meniu1(grupa_principala);
+                Meniu1(grupaPrincipala);
             }
-
 
             case 12 -> {
 
                 System.out.println("Grupa ordonata dupa medie: ");
                 System.out.println();
-                servicii_grupa.afisareGrupa(servicii_grupa.returnGrupaOrdonataByMedie(grupa_principala));
+                serviciiGrupa1.afisareGrupa(serviciiGrupa1.returnGrupaOrdonataByMedie(grupaPrincipala));
 
                 System.out.println();
                 System.out.println();
@@ -761,9 +723,8 @@ public class Meniu {
                         System.out.println();
                     }
                 }
-                Meniu1(grupa_principala);
+                Meniu1(grupaPrincipala);
             }
-
 
             case 13 -> firstRead();
 
@@ -783,9 +744,8 @@ public class Meniu {
                         System.out.println();
                     }
                 }
-                Meniu1(grupa_principala);
+                Meniu1(grupaPrincipala);
             }
-
         }
     }
 }

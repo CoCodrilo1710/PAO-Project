@@ -10,7 +10,7 @@ import java.util.Vector;
 
 public class ServiciiMaterii {
 
-    public void setter_materi(Vector<Materie> local_vector) {
+    public void setterMateri(Vector<Materie> local_vector) {
         int i = 0;
         for (AllMaterii materie : AllMaterii.values()) {
             Materie local = new Materie();
@@ -27,7 +27,7 @@ public class ServiciiMaterii {
         }
     }
 
-    public void afisare_materii() {
+    public void afisareMaterii() {
         int i = 0;
         for (AllMaterii materie : AllMaterii.values()) {
             System.out.println((i++) + ". " + materie.toString());
@@ -46,11 +46,11 @@ public class ServiciiMaterii {
         return local.get(materie).getter_data(local.get(materie).getNote().get(pozitie));
     }
 
-    public String nume_materie(Vector<Materie> local, int materie) {
+    public String numeMaterie(Vector<Materie> local, int materie) {
         return local.get(materie).getNumeMaterie().toString();
     }
 
-    public void add_absenta(Vector<Materie> localVector, int optiune, LocalDate final1) {
+    public void addAbsenta(Vector<Materie> localVector, int optiune, LocalDate final1) {
         localVector.get(optiune).getAbsente().add(final1);
     }
 
