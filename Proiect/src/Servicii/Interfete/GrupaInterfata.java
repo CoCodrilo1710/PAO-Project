@@ -23,4 +23,12 @@ public interface GrupaInterfata {
     void stergereProfesorMass(entitati.Grupa x, int numarMaterie);
 
     Grupa returnGrupaOrdonataByMedie(entitati.Grupa x);
+
+    void adaugareStudent(Grupa x, Student y);
+
+    void stergereStudent(Grupa x, Student y);
+
+    boolean exitaStudent(Grupa x, String cnp);
+
+    Student getStudentByCNP(Grupa x, String cnp);
 }

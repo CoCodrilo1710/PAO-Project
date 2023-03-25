@@ -5,6 +5,9 @@ import entitati.Materie;
 import entitati.Student;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+import java.util.Vector;
 
 public class ServiciiStudent implements StudentInterfata {
 
@@ -101,7 +104,137 @@ public class ServiciiStudent implements StudentInterfata {
         mainMaterii.removeNotaByNota(x.getSituatie(), y, nota, data);
     }
 
-    public Student returnStudent(Student x) {
-        return x;
+    @Override
+    public Student returnStudent() {
+        Scanner var = new Scanner(System.in);
+
+        System.out.println();
+        System.out.println("Introduceti datele studentului"+": ");
+        System.out.println();
+        System.out.println();
+            System.out.println("Specificati numele studentului: ");
+            String nume = var.next();
+            System.out.println("Specificati prenumele studentului: ");
+            String prenume = var.next();
+            System.out.println("Specificati CNP-ul studentului: ");
+            String cnp = var.next();
+            System.out.println("Specificati varsta studentului: ");
+            int varsta = var.nextInt();
+            System.out.println("Specificati email-ul studentului: ");
+            String email = var.next();
+            System.out.println("Specificati numarul de telefon al studentului: ");
+            String nrdetel = var.next();
+            System.out.println("Specificati anul de studiu al studentului: ");
+            int andestudiu = var.nextInt();
+            System.out.println("Specificati semestrul curent al studentului: ");
+            int semestru = var.nextInt();
+
+            Student local = new Student(cnp, prenume, nume, varsta, email, nrdetel, andestudiu, semestru);
+            Vector<Materie> localVector = new Vector<Materie>();
+
+            System.out.println();
+            System.out.println();
+            System.out.println("Specificati numarul de note pe care doriti sa-l adaugati: \n(O sa alegeti pentru fiecare nota in parte la ce materie sa o adaugati)");
+            int nrnoteLocal = var.nextInt();
+
+            ServiciiMaterii maintainLocalMaterii = new ServiciiMaterii();
+            maintainLocalMaterii.setterMateri(localVector);
+            System.out.println();
+            System.out.println();
+
+            if (nrnoteLocal <= 0) {
+                System.out.println("Nu ati introdus nicio nota");
+            } else
+                System.out.println("Notele trebuie introduse sub forma: nota ( urmata de tasta ENTER), iar mai apoi data(sub forma: zz.ll)");
+            System.out.println();
+
+            for (int i2 = 0; i2 < nrnoteLocal; i2++) {
+                System.out.println("Introduceti nota #" + i2 + ": ");
+                int nota = var.nextInt();
+                String data = var.next();
+
+                LocalDate localDate = LocalDate.now();
+                int year = localDate.getYear() - 1;
+                if (data.substring(0, 2).contains("."))
+                    data = "0" + data;
+                String backData = data;
+                data = data + "." + year;
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.uuuu");
+                LocalDate final1 = LocalDate.parse(data, formatter);
+
+                System.out.println("\n \nVa rugam alegeti materia la care doriti sa adaugati nota: \n Scrieti doar cifra corespunzatoare! \n");
+                maintainLocalMaterii.afisareMaterii();
+                int optiune = var.nextInt();
+
+                maintainLocalMaterii.add_nota(localVector, optiune, nota, final1);
+
+                System.out.println();
+                System.out.println("Ati adaugat cu succes nota " + nota + "/" + backData + " la materia ------ " + maintainLocalMaterii.numeMaterie(localVector, optiune) + " ------");
+                System.out.println();
+                System.out.println();
+                System.out.println();
+
+
+            }
+            String key;
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println("Apasati tasta ENTER pentru a adauga absentele, ecranul se va goli!");
+            String temp = var.nextLine();
+            key = var.nextLine();
+            if (key.equals("")) {
+                int numRowsInConsole = 60;
+                for (int iii = 0; iii < numRowsInConsole; iii++) {
+                    System.out.println();
+                }
+            }
+
+            System.out.println("Specificati numarul de ABSENTE pe care doriti sa-l adaugati: \n(O sa alegeti pentru fiecare ABSENTA in parte la ce materie sa o adaugati)");
+            int nrabsenteLocal = var.nextInt();
+            System.out.println();
+
+            System.out.println();
+            if (nrabsenteLocal == 0)
+                System.out.println("Nu ati introdus nicio absenta!");
+            else
+                System.out.println("Absentele trebuiesc introduse sub forma zz.dd ! Dupa fiecare absenta apsati tasta ENTER");
+
+            for (int i3 = 0; i3 < nrabsenteLocal; i3++) {
+
+                System.out.println("Introduceti data absentei #" + i3 + ": ");
+                String data = var.next();
+                LocalDate localDate = LocalDate.now();
+                int year = localDate.getYear() - 1;
+                if (data.substring(0, 2).contains("."))
+                    data = "0" + data;
+                String backData = data;
+                data = data + "." + year;
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.uuuu");
+                LocalDate final1 = LocalDate.parse(data, formatter);
+
+                System.out.println("\n \nVa rugam alegeti materia la care doriti sa adaugati ABSENTA: \n Scrieti doar cifra corespunzatoare! \n");
+                maintainLocalMaterii.afisareMaterii();
+                int optiune = var.nextInt();
+
+                maintainLocalMaterii.addAbsenta(localVector, optiune, final1);
+
+                System.out.println();
+                System.out.println("Ati adaugat cu succes ABSENTA " + backData + " la materia ------ " + maintainLocalMaterii.numeMaterie(localVector, optiune) + " ------");
+
+                System.out.println();
+                System.out.println();
+                System.out.println();
+            }
+
+
+            System.out.println();
+            System.out.println();
+            System.out.println();
+            System.out.println();
+
+            local.setSituatie(localVector);
+
+        return local;
     }
 }

@@ -726,9 +726,54 @@ public class Meniu {
                 Meniu1(grupaPrincipala);
             }
 
-            case 13 -> firstRead();
+            case 13 -> {
+                System.out.println("Ati ales sa adaugati un student!");
+                serviciiGrupa.adaugareStudent(grupaPrincipala, serviciiStudent.returnStudent());
 
-            case 14 -> {
+                System.out.println();
+                System.out.println("Inserare efectuata cu succes!");
+                System.out.println("La apasarea tastei ENTER va va trimite in meniul aplicatiei!");
+                String temp1 = var.nextLine();
+                String key = var.nextLine();
+                if (key.equals("")) {
+                    for (int iii = 0; iii < numRowsInConsole; iii++) {
+                        System.out.println();
+                    }
+                }
+                Meniu1(grupaPrincipala);
+            }
+
+            case 14 ->{
+
+                System.out.println("Ati ales sa stergeti un student!");
+                System.out.println("Introduceti CNP-ul studentului: ");
+                String cnp = var.next();
+                if (serviciiGrupa1.exitaStudent(grupaPrincipala,cnp))
+                {
+                    Student x = serviciiGrupa1.getStudentByCNP(grupaPrincipala,cnp);
+                    serviciiGrupa1.stergereStudent(grupaPrincipala,x);
+                }
+                else
+                {
+                    System.out.println("Studentul nu exista!");
+                }
+                System.out.println();
+                System.out.println("Stergere efectuata cu succes!");
+                System.out.println("La apasarea tastei ENTER va va trimite in meniul aplicatiei!");
+                String temp1 = var.nextLine();
+                String key = var.nextLine();
+                if (key.equals("")) {
+                    for (int iii = 0; iii < numRowsInConsole; iii++) {
+                        System.out.println();
+                    }
+                }
+
+                Meniu1(grupaPrincipala);
+            }
+
+            case 15 -> firstRead();
+
+            case 16 -> {
                 System.out.println("Multumim pentru utilizarea aplicatiei!");
                 System.exit(0);
             }

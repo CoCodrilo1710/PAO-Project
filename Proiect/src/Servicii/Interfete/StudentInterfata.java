@@ -18,4 +18,7 @@ public interface StudentInterfata {
     void adaugaNota(Student x, int y, int nota, LocalDate data);
 
     void stergeNota(Student x, int y, int nota, LocalDate data);
+
+    Student returnStudent();
+
 }

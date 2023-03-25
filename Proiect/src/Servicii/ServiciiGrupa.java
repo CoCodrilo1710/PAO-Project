@@ -92,6 +92,26 @@ public class ServiciiGrupa implements Servicii.Interfete.GrupaInterfata {
         return null;
     }
 
+    public boolean exitaStudent(Grupa x, String cnp) {
+        List<Student> listStudenti = new ArrayList<Student>(x.getStudenti());
+        for (Student x1 : listStudenti) {
+            if (x1.getCnp().equals(cnp)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Student getStudentByCNP(Grupa x, String cnp) {
+        List<Student> listStudenti = new ArrayList<Student>(x.getStudenti());
+        for (Student x1 : listStudenti) {
+            if (x1.getCnp().equals(cnp)) {
+                return x1;
+            }
+        }
+        return null;
+    }
+
     @Override
     public int returnNrRestanti(Grupa x) {
         List<Student> listStudenti = new ArrayList<Student>(x.getStudenti());
@@ -132,11 +152,18 @@ public class ServiciiGrupa implements Servicii.Interfete.GrupaInterfata {
     public Grupa returnGrupaOrdonataByMedie(Grupa x) {
         TreeSet<Student> treeSet = (TreeSet<Student>) x.getStudenti().descendingSet();
         Grupa t = new Grupa(x);
+        t.setStudenti(treeSet);
         return t;
     }
 
+    @Override
     public void adaugareStudent(Grupa x, Student y) {
         x.getStudenti().add(y);
+    }
+
+    @Override
+    public void stergereStudent(Grupa x, Student y) {
+        x.getStudenti().remove(y);
     }
 
 }
