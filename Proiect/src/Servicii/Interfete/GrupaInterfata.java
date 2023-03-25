@@ -31,4 +31,6 @@ public interface GrupaInterfata {
     boolean exitaStudent(Grupa x, String cnp);
 
     Student getStudentByCNP(Grupa x, String cnp);
+
+    int getterNrStudenti(Grupa x);
 }

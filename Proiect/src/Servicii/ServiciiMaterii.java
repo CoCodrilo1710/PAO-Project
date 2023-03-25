@@ -39,17 +39,17 @@ public class ServiciiMaterii implements MateriiInterfata {
 
     @Override
     public void add_nota(Vector<Materie> local, int materie, int nota, LocalDate data) {
-        local.get(materie).getNote().add(local.get(materie).get_forma(nota, data));
+        local.get(materie).getNote().add(local.get(materie).getForma(nota, data));
     }
 
     @Override
     public int return_nota(Vector<Materie> local, int materie, int pozitie) {
-        return local.get(materie).getter_nota(local.get(materie).getNote().get(pozitie));
+        return local.get(materie).getterNota(local.get(materie).getNote().get(pozitie));
     }
 
     @Override
     public LocalDate return_data(Vector<Materie> local, int materie, int pozitie) {
-        return local.get(materie).getter_data(local.get(materie).getNote().get(pozitie));
+        return local.get(materie).getterData(local.get(materie).getNote().get(pozitie));
     }
 
     @Override
@@ -83,7 +83,7 @@ public class ServiciiMaterii implements MateriiInterfata {
         if (local.get(materie).getNote().size() == 0)
             return -1;
         for (i = 0; i <= local.get(materie).getNote().size(); i++) {
-            if (local.get(materie).getter_nota(local.get(materie).getNote().get(i)) == nota && local.get(materie).getter_data(local.get(materie).getNote().get(i)).equals(data))
+            if (local.get(materie).getterNota(local.get(materie).getNote().get(i)) == nota && local.get(materie).getterData(local.get(materie).getNote().get(i)).equals(data))
                 return i;
         }
         return -1;

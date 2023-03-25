@@ -82,7 +82,7 @@ public class Meniu {
             if (nrnoteLocal <= 0) {
                 System.out.println("Nu ati introdus nicio nota");
             } else
-                System.out.println("Notele trebuie introduse sub forma: nota ( urmata de tasta ENTER), iar mai apoi data(sub forma: zz.ll)");
+                System.out.println("Notele trebuie introduse sub FormaNota: nota ( urmata de tasta ENTER), iar mai apoi data(sub FormaNota: zz.ll)");
             System.out.println();
 
             for (int i2 = 0; i2 < nrnoteLocal; i2++) {
@@ -135,7 +135,7 @@ public class Meniu {
             if (nrabsenteLocal == 0)
                 System.out.println("Nu ati introdus nicio absenta!");
             else
-                System.out.println("Absentele trebuiesc introduse sub forma zz.dd ! Dupa fiecare absenta apsati tasta ENTER");
+                System.out.println("Absentele trebuiesc introduse sub FormaNota zz.dd ! Dupa fiecare absenta apsati tasta ENTER");
 
             for (int i3 = 0; i3 < nrabsenteLocal; i3++) {
 
@@ -217,9 +217,12 @@ public class Meniu {
                 11) Afisati profesorii materiilor
                                 
                 12) Afisati intreaga grupa in ordinea mediei
+                
+                13) Adaugati un student nou
+                14) Stergeti un student
 
-                13) Cititi alta grupa
-                14) Iesiti din program
+                15) Cititi alta grupa
+                16) Iesiti din program
                 """);
 
         Scanner var = new Scanner(System.in);
@@ -317,7 +320,7 @@ public class Meniu {
                         int numar_materie = var.nextInt();
                         System.out.println("Introduceti nota: ");
                         int nota = var.nextInt();
-                        System.out.println("Introduceti data: (sub forma zz.ll");
+                        System.out.println("Introduceti data: (sub FormaNota zz.ll");
                         String data = var.next();
 
                         data = data + ".2022";
@@ -378,7 +381,7 @@ public class Meniu {
                         int numarMaterie = var.nextInt();
                         System.out.println("Introduceti nota: ");
                         int nota = var.nextInt();
-                        System.out.println("Introduceti data: (sub forma zz.ll");
+                        System.out.println("Introduceti data: (sub FormaNota zz.ll");
                         String data = var.next();
 
                         data = data + ".2022";
@@ -442,7 +445,7 @@ public class Meniu {
                         serviciiMaterii.afisareMaterii();
                         System.out.println("Introduceti numarul materiei pentru absenta pe care doriti sa o adaugati: ");
                         int numarMaterie = var.nextInt();
-                        System.out.println("Introduceti data: (sub forma zz.ll");
+                        System.out.println("Introduceti data: (sub FormaNota zz.ll");
                         String data = var.next();
 
                         data = data + ".2022";
@@ -502,7 +505,7 @@ public class Meniu {
                         serviciiMaterii.afisareMaterii();
                         System.out.println("Introduceti numarul materiei pentru absenta pe care doriti sa o stergeti: ");
                         int numarMaterie = var.nextInt();
-                        System.out.println("Introduceti data: (sub forma zz.ll");
+                        System.out.println("Introduceti data: (sub FormaNota zz.ll");
                         String data = var.next();
 
                         data = data + ".2022";
@@ -758,7 +761,7 @@ public class Meniu {
                     System.out.println("Studentul nu exista!");
                 }
                 System.out.println();
-                System.out.println("Stergere efectuata cu succes!");
+                System.out.println();
                 System.out.println("La apasarea tastei ENTER va va trimite in meniul aplicatiei!");
                 String temp1 = var.nextLine();
                 String key = var.nextLine();

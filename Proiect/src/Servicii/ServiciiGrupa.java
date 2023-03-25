@@ -1,9 +1,6 @@
 package Servicii;
 
-import entitati.Grupa;
-import entitati.Materie;
-import entitati.Profesor;
-import entitati.Student;
+import entitati.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -37,8 +34,8 @@ public class ServiciiGrupa implements Servicii.Interfete.GrupaInterfata {
             for (Materie mat : xy.getSituatie()) {
 
                 System.out.println("Materia: --- " + mat.getNumeMaterie() + " ---");
-                for (Materie.forma forma : mat.getNote()) {
-                    System.out.println("Nota: " + mat.getter_nota(forma) + " ,    Data: " + mat.getter_data(forma).getDayOfMonth() + "." + mat.getter_data(forma).getMonthValue());
+                for (entitati.FormaNota FormaNota : mat.getNote()) {
+                    System.out.println("Nota: " + mat.getterNota(FormaNota) + " ,    Data: " + mat.getterData(FormaNota).getDayOfMonth() + "." + mat.getterData(FormaNota).getMonthValue());
                     System.out.println();
                     System.out.println("Absente: ");
                     for (LocalDate data : mat.getAbsente()) {
@@ -163,7 +160,18 @@ public class ServiciiGrupa implements Servicii.Interfete.GrupaInterfata {
 
     @Override
     public void stergereStudent(Grupa x, Student y) {
-        x.getStudenti().remove(y);
+        if (getterNrStudenti(x) > 1) {
+            x.getStudenti().remove(y);
+            System.out.println("Studentul a fost sters cu succes!");
+        }
+        else {
+            System.out.println("Nu se poate sterge ultimul student dintr-o grupa!");
+        }
+    }
+
+    @Override
+    public int getterNrStudenti(Grupa x){
+        return x.getStudenti().size();
     }
 
 }

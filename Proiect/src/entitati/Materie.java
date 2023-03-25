@@ -12,7 +12,7 @@ public class Materie {
     private int nrAbsente;
     private int nrNote;
     private double medie;
-    private ArrayList<forma> note;
+    private ArrayList<FormaNota> note;
     private boolean restanta;
     private TreeSet<LocalDate> absente;
     public Materie(AllMaterii numeMaterie, int credite, int nrAbsente, int nrNote, boolean restanta) {
@@ -34,19 +34,18 @@ public class Materie {
         this.note = new ArrayList<>();
     }
 
-    public int getter_nota(forma x) {
+    public int getterNota(FormaNota x) {
         return x.nota;
     }
 
-    public LocalDate getter_data(forma x) {
+    public LocalDate getterData(FormaNota x) {
         return x.Data;
     }
 
-    public forma get_forma(int local_nota, LocalDate local_data) {
-        forma aici = new forma();
+    public FormaNota getForma(int local_nota, LocalDate local_data) {
+        FormaNota aici = new FormaNota();
         aici.Data = local_data;
         aici.nota = local_nota;
-
         return aici;
     }
 
@@ -90,11 +89,11 @@ public class Materie {
         this.nrNote = nrNote;
     }
 
-    public ArrayList<forma> getNote() {
+    public ArrayList<FormaNota> getNote() {
         return note;
     }
 
-    public void setNote(ArrayList<forma> note) {
+    public void setNote(ArrayList<FormaNota> note) {
         this.note = note;
     }
 
@@ -124,13 +123,6 @@ public class Materie {
 
     public void setNumeMaterie(AllMaterii numeMaterie) {
         this.numeMaterie = numeMaterie;
-    }
-
-    public class forma {
-        private int nota;
-        private LocalDate Data;
-
-
     }
 
 }

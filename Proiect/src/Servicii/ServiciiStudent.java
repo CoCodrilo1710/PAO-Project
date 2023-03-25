@@ -3,6 +3,7 @@ package Servicii;
 import Servicii.Interfete.StudentInterfata;
 import entitati.Materie;
 import entitati.Student;
+import entitati.FormaNota;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -76,8 +77,8 @@ public class ServiciiStudent implements StudentInterfata {
 
             System.out.println("Materia: --- " + mat.getNumeMaterie() + " ---");
             System.out.println("Note: ");
-            for (Materie.forma forma : mat.getNote()) {
-                System.out.println("Nota: " + mat.getter_nota(forma) + " ,    Data: " + mat.getter_data(forma).getDayOfMonth() + "." + mat.getter_data(forma).getMonthValue());
+            for (FormaNota FormaNota : mat.getNote()) {
+                System.out.println("Nota: " + mat.getterNota(FormaNota) + " ,    Data: " + mat.getterData(FormaNota).getDayOfMonth() + "." + mat.getterData(FormaNota).getMonthValue());
                 System.out.println();
             }
             System.out.println();
@@ -145,7 +146,7 @@ public class ServiciiStudent implements StudentInterfata {
             if (nrnoteLocal <= 0) {
                 System.out.println("Nu ati introdus nicio nota");
             } else
-                System.out.println("Notele trebuie introduse sub forma: nota ( urmata de tasta ENTER), iar mai apoi data(sub forma: zz.ll)");
+                System.out.println("Notele trebuie introduse sub FormaNota: nota ( urmata de tasta ENTER), iar mai apoi data(sub FormaNota: zz.ll)");
             System.out.println();
 
             for (int i2 = 0; i2 < nrnoteLocal; i2++) {
@@ -198,7 +199,7 @@ public class ServiciiStudent implements StudentInterfata {
             if (nrabsenteLocal == 0)
                 System.out.println("Nu ati introdus nicio absenta!");
             else
-                System.out.println("Absentele trebuiesc introduse sub forma zz.dd ! Dupa fiecare absenta apsati tasta ENTER");
+                System.out.println("Absentele trebuiesc introduse sub FormaNota zz.dd ! Dupa fiecare absenta apsati tasta ENTER");
 
             for (int i3 = 0; i3 < nrabsenteLocal; i3++) {
 
