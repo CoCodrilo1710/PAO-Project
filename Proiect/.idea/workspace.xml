@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5ffabfbb-abef-4f35-a2cb-dc5c0bc15d44" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Servicii/Interfete/GrupaInterfata.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Servicii/Interfete/MateriiInterfata.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Servicii/Interfete/ProfesoriInterfata.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Servicii/Interfete/StudentInterfata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProiectPAO/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Meniu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProiectPAO/Meniu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Servicii/ServiciiGrupa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProiectPAO/Servicii/ServiciiGrupa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Servicii/ServiciiMaterii$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProiectPAO/Servicii/ServiciiMaterii$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Servicii/ServiciiMaterii.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProiectPAO/Servicii/ServiciiMaterii.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Servicii/ServiciiGrupa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servicii/ServiciiGrupa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Servicii/ServiciiMaterii.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servicii/ServiciiMaterii.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Servicii/ServiciiProfesori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servicii/ServiciiProfesori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Servicii/ServiciiStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servicii/ServiciiStudent.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NQGxeLsOgPoh5m22HzatfNuHIB" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ffabfbb-abef-4f35-a2cb-dc5c0bc15d44" name="Changes" comment="" />
+      <created>1679589140786</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679589140786</updated>
+      <workItem from="1679589143209" duration="1559000" />
+      <workItem from="1679737901575" duration="77000" />
+      <workItem from="1679737994934" duration="4817000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

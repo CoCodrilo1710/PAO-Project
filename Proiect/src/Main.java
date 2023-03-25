@@ -12,7 +12,6 @@ public class Main {
         System.out.println("-------Aplicatia are aplicabilitate in cadrul secretariatului in activitati precum alocarea locurilor la caminele UNIBUC ------");
         System.out.println();
         System.out.println("  Precizari despre folosirea aplicatiei:");
-        System.out.println("- Daca un student este RESTANT, NU i se vor mai afisa notele");
         System.out.println("- Notele, respectiv absentele trebuiesc adaugate una cate una");
         System.out.println("- Acelasi aspect se foloseste si la stergerea lor");
         System.out.println();

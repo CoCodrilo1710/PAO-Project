@@ -10,7 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeSet;
 
-public class ServiciiGrupa {
+public class ServiciiGrupa implements Servicii.Interfete.GrupaInterfata {
+    @Override
     public void afisareGrupa(Grupa x) {
         System.out.println("Numarul grupei este: " + x.getNumar_grupa());
         System.out.println("Numarul de studenti este: " + Grupa.getNumar_studenti());
@@ -51,6 +52,7 @@ public class ServiciiGrupa {
         }
     }
 
+    @Override
     public void setareMedieGrupa(Grupa x) {
         List<Student> listStudenti = new ArrayList<Student>(x.getStudenti());
         ServiciiStudent serviciiStudent = new ServiciiStudent();
@@ -59,6 +61,7 @@ public class ServiciiGrupa {
         }
     }
 
+    @Override
     public void setareRestantaGrupa(Grupa x) {
         List<Student> listStudenti = new ArrayList<Student>(x.getStudenti());
         ServiciiStudent serviciiStudent = new ServiciiStudent();
@@ -67,6 +70,7 @@ public class ServiciiGrupa {
         }
     }
 
+    @Override
     public boolean exitaStudent(Grupa x, String nume, String prenume) {
         List<Student> listStudenti = new ArrayList<Student>(x.getStudenti());
         for (Student x1 : listStudenti) {
@@ -77,6 +81,7 @@ public class ServiciiGrupa {
         return false;
     }
 
+    @Override
     public Student getStudentByName(Grupa x, String nume, String prenume) {
         List<Student> listStudenti = new ArrayList<Student>(x.getStudenti());
         for (Student x1 : listStudenti) {
@@ -87,6 +92,7 @@ public class ServiciiGrupa {
         return null;
     }
 
+    @Override
     public int returnNrRestanti(Grupa x) {
         List<Student> listStudenti = new ArrayList<Student>(x.getStudenti());
         int nrRestanti = 0;
@@ -106,6 +112,7 @@ public class ServiciiGrupa {
         return nrRestanti;
     }
 
+    @Override
     public void setareProfesorMass(Grupa x, Profesor y, int numarMaterie) {
         List<Student> listStudenti = new ArrayList<Student>(x.getStudenti());
         for (Student x1 : listStudenti) {
@@ -113,6 +120,7 @@ public class ServiciiGrupa {
         }
     }
 
+    @Override
     public void stergereProfesorMass(Grupa x, int numarMaterie) {
         List<Student> listStudenti = new ArrayList<Student>(x.getStudenti());
         for (Student x1 : listStudenti) {
@@ -120,10 +128,15 @@ public class ServiciiGrupa {
         }
     }
 
+    @Override
     public Grupa returnGrupaOrdonataByMedie(Grupa x) {
         TreeSet<Student> treeSet = (TreeSet<Student>) x.getStudenti().descendingSet();
         Grupa t = new Grupa(x);
         return t;
+    }
+
+    public void adaugareStudent(Grupa x, Student y) {
+        x.getStudenti().add(y);
     }
 
 }

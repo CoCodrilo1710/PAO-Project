@@ -1,12 +1,14 @@
 package Servicii;
 
+import Servicii.Interfete.StudentInterfata;
 import entitati.Materie;
 import entitati.Student;
 
 import java.time.LocalDate;
 
-public class ServiciiStudent {
+public class ServiciiStudent implements StudentInterfata {
 
+    @Override
     public void setMedieStudent(Student x) {
         ServiciiMaterii mainMaterii = new ServiciiMaterii();
         int suma = 0;
@@ -29,6 +31,7 @@ public class ServiciiStudent {
         x.setMedie(medieTotala);
     }
 
+    @Override
     public void setMediePerMaterie(Student x, Materie y) {
         ServiciiMaterii mainMaterii = new ServiciiMaterii();
         int suma = 0;
@@ -46,7 +49,7 @@ public class ServiciiStudent {
         x.getSituatie().get(x.getSituatie().indexOf(y)).setMedie(medieMaterie);
     }
 
-
+    @Override
     public void setRestantaMaterii(Student x) {
         ServiciiMaterii mainMaterii = new ServiciiMaterii();
         for (Materie y : x.getSituatie()) {
@@ -54,6 +57,7 @@ public class ServiciiStudent {
         }
     }
 
+    @Override
     public void afisareStudent(Student x) {
         System.out.println("Numele este: " + x.getNume());
         System.out.println("Prenumele este: " + x.getPrenume());
@@ -85,15 +89,19 @@ public class ServiciiStudent {
         }
     }
 
+    @Override
     public void adaugaNota(Student x, int y, int nota, LocalDate data) {
         ServiciiMaterii mainMaterii = new ServiciiMaterii();
         mainMaterii.add_nota(x.getSituatie(), y, nota, data);
     }
 
+    @Override
     public void stergeNota(Student x, int y, int nota, LocalDate data) {
         ServiciiMaterii mainMaterii = new ServiciiMaterii();
         mainMaterii.removeNotaByNota(x.getSituatie(), y, nota, data);
     }
 
-
+    public Student returnStudent(Student x) {
+        return x;
+    }
 }

@@ -1,5 +1,6 @@
 package Servicii;
 
+import Servicii.Interfete.MateriiInterfata;
 import entitati.Materie;
 import entitati.Profesor;
 import entitati.AllMaterii;
@@ -8,8 +9,9 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Vector;
 
-public class ServiciiMaterii {
+public class ServiciiMaterii implements MateriiInterfata {
 
+    @Override
     public void setterMateri(Vector<Materie> local_vector) {
         int i = 0;
         for (AllMaterii materie : AllMaterii.values()) {
@@ -27,6 +29,7 @@ public class ServiciiMaterii {
         }
     }
 
+    @Override
     public void afisareMaterii() {
         int i = 0;
         for (AllMaterii materie : AllMaterii.values()) {
@@ -34,26 +37,32 @@ public class ServiciiMaterii {
         }
     }
 
+    @Override
     public void add_nota(Vector<Materie> local, int materie, int nota, LocalDate data) {
         local.get(materie).getNote().add(local.get(materie).get_forma(nota, data));
     }
 
+    @Override
     public int return_nota(Vector<Materie> local, int materie, int pozitie) {
         return local.get(materie).getter_nota(local.get(materie).getNote().get(pozitie));
     }
 
+    @Override
     public LocalDate return_data(Vector<Materie> local, int materie, int pozitie) {
         return local.get(materie).getter_data(local.get(materie).getNote().get(pozitie));
     }
 
+    @Override
     public String numeMaterie(Vector<Materie> local, int materie) {
         return local.get(materie).getNumeMaterie().toString();
     }
 
+    @Override
     public void addAbsenta(Vector<Materie> localVector, int optiune, LocalDate final1) {
         localVector.get(optiune).getAbsente().add(final1);
     }
 
+    @Override
     public void afisare_absente(Vector<Materie> localVector, int materie) {
         for (LocalDate localDate : localVector.get(materie).getAbsente()) {
             if (localDate.getMonthValue() < 10)
@@ -68,7 +77,7 @@ public class ServiciiMaterii {
         }
     }
 
-
+    @Override
     public int returnPozitieNota(Vector<Materie> local, int materie, int nota, LocalDate data) {
         int i = 0;
         if (local.get(materie).getNote().size() == 0)
@@ -80,10 +89,12 @@ public class ServiciiMaterii {
         return -1;
     }
 
+    @Override
     public void removeNotaByNota(Vector<Materie> local, int materie, int nota, LocalDate data) {
         local.get(materie).getNote().remove(returnPozitieNota(local, materie, nota, data));
     }
 
+    @Override
     public int returnPozitieAbsenta(Vector<Materie> local, int materie, LocalDate data) {
         int i = 0;
         if (local.get(materie).getAbsente().size() == 0)
@@ -98,14 +109,17 @@ public class ServiciiMaterii {
         return -1;
     }
 
+    @Override
     public void removeAbsentaByData(Vector<Materie> local, int materie, LocalDate data) {
         local.get(materie).getAbsente().remove(returnPozitieAbsenta(local, materie, data));
     }
 
+    @Override
     public void seteazaProfesor(Profesor x, Vector<Materie> local, int materie) {
         local.get(materie).setProfesor(x);
     }
 
+    @Override
     public void afisareProfesori(Vector<Materie> local) {
         ServiciiProfesori serviciiProfesori = new ServiciiProfesori();
         for (Materie materie : local) {
