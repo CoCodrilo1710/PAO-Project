@@ -1,10 +1,7 @@
 import Servicii.ServiciiGrupa;
 import Servicii.ServiciiMaterii;
 import Servicii.ServiciiStudent;
-import entitati.Grupa;
-import entitati.Materie;
-import entitati.Profesor;
-import entitati.Student;
+import entitati.*;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -24,7 +21,24 @@ public class Meniu {
         System.out.print("Numarul grupei este:  ");
         int key_int = var.nextInt();
         System.out.println();
-        Grupa grupa = new Grupa(key_int);
+        System.out.println();
+        System.out.println("Dati detalii despre locatia unde o sa se sustina cursurile: ");
+        System.out.println();
+
+        System.out.println("Introduceti un acronim pentru locatie: ");
+        String acronim = var.next();
+        System.out.println("Introduceti adresa efectiva( strada, numar, bloc, etaj");
+        String adresa = var.next();
+        System.out.println("Introduceti orasul: ");
+        String oras = var.next();
+        System.out.println("Introduceti judetul: ");
+        String judet = var.next();
+        System.out.println("Introduceti tara: ");
+        String tara = var.next();
+
+
+        Locatie locatie = new Locatie(acronim, adresa, oras, judet, tara);
+        Grupa grupa = new Grupa(key_int, locatie);
 
         System.out.println();
         System.out.println();
@@ -67,7 +81,7 @@ public class Meniu {
             int semestru = var.nextInt();
 
             Student local = new Student(cnp, prenume, nume, varsta, email, nrdetel, andestudiu, semestru);
-            Vector<Materie> localVector = new Vector<Materie>();
+            Vector<Materie> localVector = new Vector<>();
 
             System.out.println();
             System.out.println();
@@ -135,7 +149,7 @@ public class Meniu {
             if (nrabsenteLocal == 0)
                 System.out.println("Nu ati introdus nicio absenta!");
             else
-                System.out.println("Absentele trebuiesc introduse sub FormaNota zz.dd ! Dupa fiecare absenta apsati tasta ENTER");
+                System.out.println("Absentele trebuiesc introduse sub forma zz.dd ! Dupa fiecare absenta apsati tasta ENTER");
 
             for (int i3 = 0; i3 < nrabsenteLocal; i3++) {
 
@@ -220,9 +234,11 @@ public class Meniu {
                 
                 13) Adaugati un student nou
                 14) Stergeti un student
+                
+                15) Modificati locatia grupei ( In urma unei relocari )
 
-                15) Cititi alta grupa
-                16) Iesiti din program
+                16) Cititi alta grupa
+                17) Iesiti din program
                 """);
 
         Scanner var = new Scanner(System.in);
@@ -774,9 +790,30 @@ public class Meniu {
                 Meniu1(grupaPrincipala);
             }
 
-            case 15 -> firstRead();
 
-            case 16 -> {
+            case 15 -> {
+                System.out.println("Ati ales sa modificati locatia grupei! ( In urma unei relocari! )");
+                System.out.println();
+                System.out.println("Introduceti noua locatie: ");
+                System.out.println();
+                System.out.println("Introduceti un acronim pentru locatie: ");
+                String acronim = var.next();
+                System.out.println("Introduceti adresa efectiva( strada, numar, bloc, etaj");
+                String adresa = var.next();
+                System.out.println("Introduceti orasul: ");
+                String oras = var.next();
+                System.out.println("Introduceti judetul: ");
+                String judet = var.next();
+                System.out.println("Introduceti tara: ");
+                String tara = var.next();
+
+                Locatie locatie = new Locatie(acronim, adresa, oras, judet, tara);
+                grupaPrincipala.setLocatie(locatie);
+            }
+
+            case 16 -> firstRead();
+
+            case 17 -> {
                 System.out.println("Multumim pentru utilizarea aplicatiei!");
                 System.exit(0);
             }

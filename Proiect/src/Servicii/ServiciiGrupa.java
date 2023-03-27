@@ -11,6 +11,8 @@ public class ServiciiGrupa implements Servicii.Interfete.GrupaInterfata {
     @Override
     public void afisareGrupa(Grupa x) {
         System.out.println("Numarul grupei este: " + x.getNumar_grupa());
+        System.out.println();
+        System.out.println(x.getLocatie());
         System.out.println("Numarul de studenti este: " + Grupa.getNumar_studenti());
         List<Student> listStudenti = new ArrayList<Student>(x.getStudenti());
         System.out.println();
@@ -156,6 +158,7 @@ public class ServiciiGrupa implements Servicii.Interfete.GrupaInterfata {
     @Override
     public void adaugareStudent(Grupa x, Student y) {
         x.getStudenti().add(y);
+        Grupa.setNumar_studenti(Grupa.getNumar_studenti() + 1);
     }
 
     @Override
@@ -163,6 +166,7 @@ public class ServiciiGrupa implements Servicii.Interfete.GrupaInterfata {
         if (getterNrStudenti(x) > 1) {
             x.getStudenti().remove(y);
             System.out.println("Studentul a fost sters cu succes!");
+            Grupa.setNumar_studenti(Grupa.getNumar_studenti() - 1);
         }
         else {
             System.out.println("Nu se poate sterge ultimul student dintr-o grupa!");

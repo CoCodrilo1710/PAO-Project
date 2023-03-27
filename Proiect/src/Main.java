@@ -9,7 +9,7 @@ public class Main {
         System.out.println();
         System.out.println("Aceasta aplicatie simuleaza un catalog online construit pe planul unui grupe studentesti cu un numar dat de studenti!");
         System.out.println();
-        System.out.println("-------Aplicatia are aplicabilitate in cadrul secretariatului in activitati precum alocarea locurilor la caminele UNIBUC ------");
+        System.out.println("------- Aplicatia are aplicabilitate in cadrul secretariatului in activitati precum alocarea locurilor la caminele UNIBUC ------");
         System.out.println();
         System.out.println("  Precizari despre folosirea aplicatiei:");
         System.out.println("- Notele, respectiv absentele trebuiesc adaugate una cate una");

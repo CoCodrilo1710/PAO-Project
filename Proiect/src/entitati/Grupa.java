@@ -12,15 +12,19 @@ public class Grupa {
     private int numar_grupa;
     private TreeSet<Student> studenti;
 
+    private Locatie locatie;
+
     public Grupa(Grupa x) {
         this.numar_grupa = x.numar_grupa;
         this.studenti = x.studenti;
-        numar_studenti = numar_studenti;
+        this.numar_studenti = numar_studenti;
+
     }
 
-    public Grupa(int nrgrupa) {
-        studenti = new TreeSet<>();
-        numar_grupa = nrgrupa;
+    public Grupa(int nrgrupa, Locatie locatie) {
+        this.studenti = new TreeSet<>();
+        this.numar_grupa = nrgrupa;
+        this.locatie = locatie;
     }
 
     public static int getNumar_studenti() {
@@ -32,13 +36,8 @@ public class Grupa {
     }
 
     public void Adauga_Student(Student local) {
-        studenti.add(local);
+        this.studenti.add(local);
         numar_studenti++;
-    }
-
-    public void Sterge_Student(Student local) {
-        studenti.remove(local);
-        numar_studenti--;
     }
 
     public int getNumar_grupa() {
@@ -55,6 +54,14 @@ public class Grupa {
 
     public void setStudenti(TreeSet<Student> studenti) {
         this.studenti = studenti;
+    }
+
+    public Locatie getLocatie() {
+        return locatie;
+    }
+
+    public void setLocatie(Locatie locatie) {
+        this.locatie = locatie;
     }
 
 
