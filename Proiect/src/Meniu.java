@@ -189,12 +189,11 @@ public class Meniu {
             System.out.println();
 
             local.setSituatie(localVector);
-            grupa.Adauga_Student(local);
+            grupa.getStudenti().add(local);
 
         }
         System.out.println();
         System.out.println();
-        List<Student> listStudenti = new ArrayList<Student>(grupa.getStudenti());
         // maintain_local_materii.afisare_absente(listStudenti.get(0).getSituatie(),3);  /// pentru studentul 0, materia 3
 
         System.out.println("Ati citit toate detaliile necesare! \nLa apasarea tastei ENTER va va trimite in meniul aplicatiei!");

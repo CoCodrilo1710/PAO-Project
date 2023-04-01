@@ -2,6 +2,7 @@ package Servicii;
 
 import entitati.*;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,12 +15,14 @@ public class ServiciiGrupa implements Servicii.Interfete.GrupaInterfata {
         System.out.println();
         System.out.println(x.getLocatie());
         System.out.println("Numarul de studenti este: " + Grupa.getNumar_studenti());
-        List<Student> listStudenti = new ArrayList<Student>(x.getStudenti());
+        System.out.println();
+        System.out.println("Nr de studenti este: " + x.getStudenti().size());
+        ArrayList<Student> listStudenti = new ArrayList<Student>(x.getStudenti());
         System.out.println();
         System.out.println();
 
         for (int i = 0; i < listStudenti.size(); i++) {
-            System.out.println("Studentul #" + (i));
+            System.out.println("Studentul #" + (i+1));
             System.out.println();
             System.out.println();
             System.out.println("Numele este: " + listStudenti.get(i).getNume());

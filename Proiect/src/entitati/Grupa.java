@@ -22,7 +22,7 @@ public class Grupa {
     }
 
     public Grupa(int nrgrupa, Locatie locatie) {
-        this.studenti = new TreeSet<>();
+        this.studenti = new TreeSet<Student>();
         this.numar_grupa = nrgrupa;
         this.locatie = locatie;
     }
