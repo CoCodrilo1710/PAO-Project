@@ -4,9 +4,7 @@ import entitati.*;
 
 import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.TreeSet;
+import java.util.*;
 
 public class ServiciiGrupa implements Servicii.Interfete.GrupaInterfata {
     @Override
@@ -169,9 +167,25 @@ public class ServiciiGrupa implements Servicii.Interfete.GrupaInterfata {
 
     @Override
     public Grupa returnGrupaOrdonataByMedie(Grupa x) {
-        TreeSet<Student> treeSet = (TreeSet<Student>) x.getStudenti().descendingSet();
+
+        TreeSet<Student> copie = new TreeSet<>(new Comparator<Student>() { // ordonare descrescatoare
+            public int compare(Student o1, Student o2) {
+                if (o1.getMedie() > o2.getMedie()) {
+                    return -1;
+                }
+                else if (o1.getMedie() < o2.getMedie()) {
+                    return 1;
+                }
+                else {
+                    return 0;
+                }
+            }
+        });
+
+        copie.addAll(x.getStudenti());
+
         Grupa t = new Grupa(x);
-        t.setStudenti(treeSet);
+        t.setStudenti(copie);
         return t;
     }
 

@@ -814,6 +814,19 @@ public class Meniu {
 
                 Locatie locatie = new Locatie(acronim, adresa, oras, judet, tara);
                 grupaPrincipala.setLocatie(locatie);
+                System.out.println("Modificarea a fost facuta cu succes!");
+                System.out.println();
+                System.out.println();
+                System.out.println("La apasarea tastei ENTER va va trimite in meniul aplicatiei!");
+                String temp1 = var.nextLine();
+                String key = var.nextLine();
+                if (key.equals("")) {
+                    for (int iii = 0; iii < numRowsInConsole; iii++) {
+                        System.out.println();
+                    }
+                }
+
+                Meniu1(grupaPrincipala);
             }
 
             case 16 -> firstRead();
