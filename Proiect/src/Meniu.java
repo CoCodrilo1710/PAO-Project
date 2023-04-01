@@ -189,7 +189,7 @@ public class Meniu {
             System.out.println();
 
             local.setSituatie(localVector);
-            grupa.getStudenti().add(local);
+            grupa.Adauga_Student(local);
 
         }
         System.out.println();

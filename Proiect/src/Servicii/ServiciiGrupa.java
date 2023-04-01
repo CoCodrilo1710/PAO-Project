@@ -16,7 +16,6 @@ public class ServiciiGrupa implements Servicii.Interfete.GrupaInterfata {
         System.out.println(x.getLocatie());
         System.out.println("Numarul de studenti este: " + Grupa.getNumar_studenti());
         System.out.println();
-        System.out.println("Nr de studenti este: " + x.getStudenti().size());
         ArrayList<Student> listStudenti = new ArrayList<Student>(x.getStudenti());
         System.out.println();
         System.out.println();
