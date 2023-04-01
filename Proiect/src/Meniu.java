@@ -25,12 +25,16 @@ public class Meniu {
         System.out.println("Dati detalii despre locatia unde o sa se sustina cursurile: ");
         System.out.println();
 
+        String temp12 = var.nextLine();
         System.out.println("Introduceti un acronim pentru locatie: ");
-        String acronim = var.next();
+        String acronim = "";
+        acronim+=var.nextLine();
         System.out.println("Introduceti adresa efectiva( strada, numar, bloc, etaj");
-        String adresa = var.next();
+        String adresa = "";
+        adresa+=var.nextLine();
         System.out.println("Introduceti orasul: ");
-        String oras = var.next();
+        String oras = "";
+        oras+=var.nextLine();
         System.out.println("Introduceti judetul: ");
         String judet = var.next();
         System.out.println("Introduceti tara: ");
