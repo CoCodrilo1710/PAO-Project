@@ -53,11 +53,16 @@ public class ServiciiStudent implements StudentInterfata {
         x.getSituatie().get(x.getSituatie().indexOf(y)).setMedie(medieMaterie);
     }
 
+
     @Override
     public void setRestantaMaterii(Student x) {
         ServiciiMaterii mainMaterii = new ServiciiMaterii();
         for (Materie y : x.getSituatie()) {
-            x.getSituatie().get(x.getSituatie().indexOf(y)).setRestanta(x.getSituatie().get(x.getSituatie().indexOf(y)).getMedie() < 5.0);
+            if (x.getSituatie().get(x.getSituatie().indexOf(y)).getMedie() < 5.0) {
+                x.getSituatie().get(x.getSituatie().indexOf(y)).setRestanta(true);
+            } else {
+                x.getSituatie().get(x.getSituatie().indexOf(y)).setRestanta(false);
+            }
         }
     }
 
@@ -81,6 +86,8 @@ public class ServiciiStudent implements StudentInterfata {
                 System.out.println("Nota: " + mat.getterNota(FormaNota) + " ,    Data: " + mat.getterData(FormaNota).getDayOfMonth() + "." + mat.getterData(FormaNota).getMonthValue());
                 System.out.println();
             }
+            System.out.println("Media la aceasta materie este: " + mat.getMedie());
+            System.out.println();
             System.out.println();
             System.out.println("Absente: ");
             for (LocalDate data : mat.getAbsente()) {

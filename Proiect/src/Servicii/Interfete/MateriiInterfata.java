@@ -27,11 +27,12 @@ public interface MateriiInterfata {
 
     void removeNotaByNota(Vector<Materie> local, int materie, int nota, LocalDate data);
 
-    int returnPozitieAbsenta(Vector<Materie> local, int materie, LocalDate data);
+    LocalDate existaAbsenta(Vector<Materie> local, int materie, LocalDate data);
 
     void removeAbsentaByData(Vector<Materie> local, int materie, LocalDate data);
 
     void seteazaProfesor(Profesor x, Vector<Materie> local, int materie);
 
     void afisareProfesori(Vector<Materie> local);
+
 }

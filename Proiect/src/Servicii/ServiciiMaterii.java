@@ -95,23 +95,24 @@ public class ServiciiMaterii implements MateriiInterfata {
     }
 
     @Override
-    public int returnPozitieAbsenta(Vector<Materie> local, int materie, LocalDate data) {
+    public LocalDate existaAbsenta(Vector<Materie> local, int materie, LocalDate data) {
         int i = 0;
         if (local.get(materie).getAbsente().size() == 0)
-            return -1;
+            return null;
 
         for (i = 0; i <= local.get(materie).getAbsente().size(); i++) {
 
             ArrayList<LocalDate> listaAbsente = new ArrayList<LocalDate>(local.get(materie).getAbsente());
             if (listaAbsente.get(i).equals(data))
-                return i;
+                return listaAbsente.get(i);
         }
-        return -1;
+        return null;
     }
+
 
     @Override
     public void removeAbsentaByData(Vector<Materie> local, int materie, LocalDate data) {
-        local.get(materie).getAbsente().remove(returnPozitieAbsenta(local, materie, data));
+        local.get(materie).getAbsente().remove(existaAbsenta(local, materie, data));
     }
 
     @Override
@@ -131,6 +132,7 @@ public class ServiciiMaterii implements MateriiInterfata {
             System.out.println("----------------------------------------------------");
         }
     }
+
 
 }
 

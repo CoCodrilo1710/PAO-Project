@@ -12,6 +12,8 @@ public interface GrupaInterfata {
 
     void setareRestantaGrupa(entitati.Grupa x);
 
+    void setareMedieMateriiGrupa(Grupa x);
+
     boolean exitaStudent(entitati.Grupa x, String nume, String prenume);
 
     Student getStudentByName(entitati.Grupa x, String nume, String prenume);

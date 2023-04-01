@@ -5,8 +5,6 @@ import entitati.*;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -213,6 +211,7 @@ public class Meniu {
         ServiciiGrupa serviciiGrupa = new ServiciiGrupa();
         serviciiGrupa.setareMedieGrupa(grupaPrincipala);
         serviciiGrupa.setareRestantaGrupa(grupaPrincipala);
+        serviciiGrupa.setareMedieMateriiGrupa(grupaPrincipala);
 
         System.out.println("""
                     
@@ -531,7 +530,7 @@ public class Meniu {
                         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.uuuu");
                         LocalDate final1 = LocalDate.parse(data, formatter);
 
-                        if (serviciiMaterii.returnPozitieAbsenta(ty.getSituatie(), numarMaterie, final1) == -1)
+                        if (serviciiMaterii.existaAbsenta(ty.getSituatie(), numarMaterie, final1) == null)
                             System.out.println("Absenta nu a fost gasita!");
                         else {
                             serviciiMaterii.removeAbsentaByData(ty.getSituatie(), numarMaterie, final1);
@@ -589,6 +588,9 @@ public class Meniu {
                         if (mat.getRestanta()) {
                             System.out.println(mat.getNumeMaterie().toString());
                             numar++;
+                            System.out.println();
+                            System.out.println("Media la aceasta materie este: " + mat.getMedie());
+                            System.out.println();
                         }
                     }
                     System.out.println();

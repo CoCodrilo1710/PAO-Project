@@ -38,15 +38,21 @@ public class ServiciiGrupa implements Servicii.Interfete.GrupaInterfata {
             for (Materie mat : xy.getSituatie()) {
 
                 System.out.println("Materia: --- " + mat.getNumeMaterie() + " ---");
+                System.out.println("Note: ");
                 for (entitati.FormaNota FormaNota : mat.getNote()) {
                     System.out.println("Nota: " + mat.getterNota(FormaNota) + " ,    Data: " + mat.getterData(FormaNota).getDayOfMonth() + "." + mat.getterData(FormaNota).getMonthValue());
                     System.out.println();
+                    System.out.println("Media la aceasta materie este: " + mat.getMedie());
+                    System.out.println();
+                    System.out.println();
+                }
+                System.out.println();
                     System.out.println("Absente: ");
                     for (LocalDate data : mat.getAbsente()) {
                         System.out.println(data.getDayOfMonth() + "." + data.getMonthValue());
                     }
                     System.out.println();
-                }
+
                 System.out.println();
                 System.out.println();
             }
@@ -64,10 +70,22 @@ public class ServiciiGrupa implements Servicii.Interfete.GrupaInterfata {
 
     @Override
     public void setareRestantaGrupa(Grupa x) {
-        List<Student> listStudenti = new ArrayList<Student>(x.getStudenti());
+        ArrayList<Student> listStudenti = new ArrayList<Student>(x.getStudenti());
         ServiciiStudent serviciiStudent = new ServiciiStudent();
         for (Student x1 : listStudenti) {
             serviciiStudent.setRestantaMaterii(x1);
+        }
+    }
+
+    @Override
+    public void setareMedieMateriiGrupa(Grupa x)
+    {
+        ArrayList<Student> listStudenti = new ArrayList<Student>(x.getStudenti());
+        ServiciiStudent serviciiStudent = new ServiciiStudent();
+        for (Student x1 : listStudenti) {
+            for (Materie x2 : x1.getSituatie()) {
+                serviciiStudent.setMediePerMaterie(x1, x2);
+            }
         }
     }
 
