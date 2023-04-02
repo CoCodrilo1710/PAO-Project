@@ -2,7 +2,7 @@
 Digital Classbok V2.0 ( Java Edition &lt;3 )
 
 # Definirea sistemului
-Aceasta aplicatie simuleaza un catalog online construit pe planul unui grupe studentesti cu un numar dat de studenti!
+Aceasta aplicatie simuleaza un catalog online construit pe planul unui grupe studentesti cu un numar dat de studenti! ( sau pe baza unei clase dintr-o scoala)
 
 Sistemul vine in ajutorul Secretariatului unei Facultati/Scoli care doreste sa faca o clasificare a studentilor 
 pe baza mediei lor din timpul anului. 
