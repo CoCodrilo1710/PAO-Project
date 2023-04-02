@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ffabfbb-abef-4f35-a2cb-dc5c0bc15d44" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Meniu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Meniu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servicii/ServiciiMaterii.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servicii/ServiciiMaterii.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,20 +19,16 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2NQGxeLsOgPoh5m22HzatfNuHIB" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -44,7 +39,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679589140786</updated>
-      <workItem from="1679589143209" duration="1048000" />
+      <workItem from="1679589143209" duration="1559000" />
+      <workItem from="1679737901575" duration="77000" />
+      <workItem from="1679737994934" duration="16812000" />
+      <workItem from="1679911518739" duration="3955000" />
+      <workItem from="1680350314057" duration="53000" />
+      <workItem from="1680350443715" duration="2469000" />
     </task>
     <servers />
   </component>
