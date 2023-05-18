@@ -1,8 +1,9 @@
-import java.io.IOException;
+import application.Menu;
+
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args){
         System.out.println("   ------------- DISCLAIMER ------------     ");
         System.out.println();
         System.out.println("Se recomanda largirea terminalului pentru a intra un rand complet pe latimea acestuia!");
@@ -19,19 +20,20 @@ public class Main {
         System.out.println("-------Rugam citirea cu atentie a instructiunilor date pe ecran!----------");
         System.out.println();
         System.out.println();
-        Scanner var = new Scanner(System.in);
+        Scanner varCitire = new Scanner(System.in);
         System.out.println("Daca ati citit acest mesaj, puteti trece mai departe!");
         System.out.println("Pentru acest lucru, apasati tasta ENTER!");
-
-        String key = " ";
-        key = var.nextLine();
+        String key;
+        key = varCitire.nextLine();
         if (key.equals("")) {
             int numRowsInConsole = 60;
             for (int ii = 0; ii < numRowsInConsole; ii++) {
                 System.out.println();
             }
         }
-        Meniu serviceCentral = new Meniu();
+
+
+        Menu serviceCentral = Menu.getInstance();
         serviceCentral.firstRead();
     }
 }
