@@ -5,55 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ffabfbb-abef-4f35-a2cb-dc5c0bc15d44" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/InvalidNameException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/OutOfRangeInputException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/UnknownStudentException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/GrupaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/MaterieService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/MedieCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/ProfesorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/impl/MedieAritmeticaImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/impl/MediePonderataImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProiectPAO/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Meniu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Servicii/Interfete/GrupaInterfata.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Servicii/Interfete/MateriiInterfata.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Servicii/Interfete/ProfesoriInterfata.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Servicii/Interfete/StudentInterfata.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Servicii/ServiciiGrupa$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Servicii/ServiciiGrupa.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Servicii/ServiciiMaterii$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Servicii/ServiciiMaterii.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Servicii/ServiciiProfesori.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Servicii/ServiciiStudent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/entitati/AllMaterii.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/entitati/FormaNota.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/entitati/Grupa.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/entitati/Locatie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/entitati/Materie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/entitati/Persoana.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/entitati/Profesor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/entitati/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Meniu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servicii/Interfete/GrupaInterfata.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servicii/Interfete/MateriiInterfata.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servicii/Interfete/ProfesoriInterfata.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servicii/Interfete/StudentInterfata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servicii/ServiciiGrupa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/impl/GrupaServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servicii/ServiciiMaterii.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/impl/MaterieServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servicii/ServiciiProfesori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/impl/ProfesorServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servicii/ServiciiStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entitati/AllMaterii.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/enums/AllMaterii.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entitati/FormaNota.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FormaNota.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entitati/Grupa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Grupa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entitati/Locatie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Locatie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entitati/Materie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Materie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entitati/Persoana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/abstracts/Persoana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entitati/Profesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Profesor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entitati/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/application/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProiectPAO/application/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/exceptions/UnknownStudentException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProiectPAO/exceptions/UnknownStudentException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +61,7 @@
       <workItem from="1679911518739" duration="3955000" />
       <workItem from="1680350314057" duration="53000" />
       <workItem from="1680350443715" duration="2469000" />
-      <workItem from="1683738644767" duration="29099000" />
+      <workItem from="1683738644767" duration="30362000" />
     </task>
     <servers />
   </component>

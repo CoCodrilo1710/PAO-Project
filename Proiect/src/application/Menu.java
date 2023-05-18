@@ -135,7 +135,7 @@ public class Menu {
                 try {
                     cnp = var.next();
                     String regex = "^[0-9]{13}$";
-                    if (!nume.matches(regex)) {
+                    if (!cnp.matches(regex)) {
                         throw new InvalidNameException("CNP-ul nu este valid! Trebuie sa aiba 13 cifre si sa nu contina litere sau alte caractere speciale!");
                     }
                     break;
@@ -296,7 +296,7 @@ public class Menu {
             //      System.out.println(maintain_local_materii.return_nota(local_vector,4,0));   // printare nota
 
             System.out.println("Specificati numarul de ABSENTE pe care doriti sa-l adaugati: \n(O sa alegeti pentru fiecare ABSENTA in parte la ce materie sa o adaugati)");
-            int nrabsenteLocal = var.nextInt();
+            int nrabsenteLocal;
             while (true) {
                 try {
                     nrabsenteLocal = var.nextInt();
