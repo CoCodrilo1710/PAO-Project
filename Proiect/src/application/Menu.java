@@ -13,8 +13,9 @@ import java.util.Scanner;
 
 public class Menu {
 
+    private int ok;
     private static final Menu instance = new Menu();
-    private Menu() {};
+    private Menu() {}
     public static Menu getInstance(){ return instance; }
 
     public void firstRead() {
@@ -399,15 +400,19 @@ public class Menu {
                 System.out.println();
             }
         }
+        ok = 1;
         Meniu1(grupa);
     }
 
     public void Meniu1(Grupa grupaPrincipala) {
 
         GrupaServiceImpl serviciiGrupa = new GrupaServiceImpl();
-        serviciiGrupa.setareMedieGrupa(grupaPrincipala);
-        serviciiGrupa.setareRestantaGrupa(grupaPrincipala);
-        serviciiGrupa.setareMedieMateriiGrupa(grupaPrincipala);
+        VerifyAverageThread verificareMedie = null;
+        if (ok==1) {
+            verificareMedie = new VerifyAverageThread(grupaPrincipala);
+            Thread thread = new Thread(verificareMedie);
+            thread.start();
+        }
 
         System.out.println("""
                     
@@ -438,7 +443,7 @@ public class Menu {
                 16) Cititi alta grupa
                 17) Iesiti din program
                 """);
-
+        ok = 0;
         Scanner var = new Scanner(System.in);
         System.out.println();
         System.out.println();
@@ -1280,6 +1285,7 @@ public class Menu {
 
             case 17 -> {
                 System.out.println("Multumim pentru utilizarea aplicatiei!");
+                verificareMedie.stop();
                 System.exit(0);
             }
 
@@ -1297,5 +1303,7 @@ public class Menu {
                 Meniu1(grupaPrincipala);
             }
         }
+
+    verificareMedie.stop();
     }
 }
