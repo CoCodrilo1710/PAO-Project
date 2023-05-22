@@ -5,117 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ffabfbb-abef-4f35-a2cb-dc5c0bc15d44" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/csv/CsvWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/.idea/sonarlint/securityhotspotstore/0/d/0d109d318cfaf62a3952227048c118dc584f4f7f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/config/DatabaseConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mapper/GrupaMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mapper/LocatieMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mapper/ProfesorMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mapper/StudentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/GrupaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/impl/GrupaRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectPAO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectPAO.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/.idea/sonarlint/issuestore/0/d/0d109d318cfaf62a3952227048c118dc584f4f7f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/.idea/sonarlint/securityhotspotstore/0/d/0d109d318cfaf62a3952227048c118dc584f4f7f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/Proiect.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/application/Menu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/application/VerifyAverageThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/exceptions/InvalidNameException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/exceptions/OutOfRangeInputException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/exceptions/UnknownStudentException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/model/FormaNota.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/model/Grupa.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/model/Locatie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/model/Materie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/model/Profesor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/model/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/model/abstracts/Persoana.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/model/enums/AllMaterii.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/out/production/Proiect/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/out/production/Proiect/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/out/production/Proiect/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/out/production/Proiect/.idea/sonarlint/issuestore/0/d/0d109d318cfaf62a3952227048c118dc584f4f7f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/out/production/Proiect/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/out/production/Proiect/.idea/sonarlint/securityhotspotstore/0/d/0d109d318cfaf62a3952227048c118dc584f4f7f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/out/production/Proiect/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/out/production/Proiect/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/out/production/Proiect/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/out/production/Proiect/Proiect.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/service/GrupaService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/service/MaterieService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/service/MedieCalculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/service/ProfesorService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/service/StudentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/service/impl/GrupaServiceImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/service/impl/GrupaServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/service/impl/MaterieServiceImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/service/impl/MaterieServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/service/impl/MedieAritmeticaImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/service/impl/MediePonderataImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/service/impl/ProfesorServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProiectPAO/service/impl/StudentServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/sonarlint/issuestore/0/d/0d109d318cfaf62a3952227048c118dc584f4f7f" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/.idea/sonarlint/issuestore/0/d/0d109d318cfaf62a3952227048c118dc584f4f7f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/sonarlint/securityhotspotstore/0/d/0d109d318cfaf62a3952227048c118dc584f4f7f" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proiect.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Proiect.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/VerifyAverageThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/VerifyAverageThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/InvalidNameException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/InvalidNameException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/OutOfRangeInputException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/OutOfRangeInputException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/UnknownStudentException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/UnknownStudentException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FormaNota.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/FormaNota.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Grupa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Grupa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Locatie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Locatie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Materie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Materie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Profesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Profesor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/abstracts/Persoana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/abstracts/Persoana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/enums/AllMaterii.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/enums/AllMaterii.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/.idea/sonarlint/issuestore/0/d/0d109d318cfaf62a3952227048c118dc584f4f7f" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/.idea/sonarlint/issuestore/0/d/0d109d318cfaf62a3952227048c118dc584f4f7f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/.idea/sonarlint/securityhotspotstore/0/d/0d109d318cfaf62a3952227048c118dc584f4f7f" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/.idea/sonarlint/securityhotspotstore/0/d/0d109d318cfaf62a3952227048c118dc584f4f7f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/Meniu.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/Meniu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/Proiect.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/Proiect.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/Servicii/serviciiGrupa.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/Servicii/serviciiGrupa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/Servicii/serviciiMaterii$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/Servicii/serviciiMaterii$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/Servicii/serviciiMaterii.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/Servicii/serviciiMaterii.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/Servicii/serviciiProfesori.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/Servicii/serviciiProfesori.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/Servicii/serviciiStudent.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/Servicii/serviciiStudent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/entitati/AllMaterii.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/entitati/AllMaterii.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/entitati/Grupa.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/entitati/Grupa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/entitati/Materie$forma.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/entitati/Materie$forma.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/entitati/Materie.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/entitati/Materie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/entitati/Persoana.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/entitati/Persoana.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/entitati/Profesor.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/entitati/Profesor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Proiect/entitati/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/out/production/Proiect/entitati/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/GrupaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/GrupaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/MaterieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/MaterieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/MedieCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/MedieCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/ProfesorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ProfesorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/impl/GrupaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/GrupaServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/impl/MaterieServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/MaterieServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/impl/MedieAritmeticaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/MedieAritmeticaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/impl/MediePonderataImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/MediePonderataImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/impl/ProfesorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/ProfesorServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Grupa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Grupa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Locatie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Locatie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Materie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Materie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Profesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Profesor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/abstracts/Persoana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/abstracts/Persoana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/ProfesorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/ProfesorServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,22 +49,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "Docker",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -175,7 +80,9 @@
       <workItem from="1680350314057" duration="53000" />
       <workItem from="1680350443715" duration="2469000" />
       <workItem from="1683738644767" duration="30453000" />
-      <workItem from="1684488291913" duration="7971000" />
+      <workItem from="1684488291913" duration="20460000" />
+      <workItem from="1684756217295" duration="10000" />
+      <workItem from="1684756249066" duration="9625000" />
     </task>
     <servers />
   </component>

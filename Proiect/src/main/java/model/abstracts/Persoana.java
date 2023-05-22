@@ -1,7 +1,10 @@
 package model.abstracts;
 
+import lombok.experimental.SuperBuilder;
+
 import java.util.Objects;
 
+@SuperBuilder
 public abstract class Persoana {
     private String cnp;
     private String prenume;

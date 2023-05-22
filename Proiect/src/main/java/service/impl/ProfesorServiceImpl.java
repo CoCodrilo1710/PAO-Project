@@ -7,7 +7,7 @@ public class ProfesorServiceImpl implements ProfesorService {
 
     @Override
     public void afisareProfesor(Profesor x) {
-        System.out.println("ID: " + Profesor.getterId());
+        System.out.println("ID: " + x.getterId());
         System.out.println("Nume: " + x.getNume());
         System.out.println("Prenume: " + x.getPrenume());
         System.out.println("CNP: " + x.getCnp());

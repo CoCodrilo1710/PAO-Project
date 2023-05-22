@@ -1,13 +1,15 @@
 package model;
 
+import lombok.experimental.SuperBuilder;
 import model.enums.AllMaterii;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.TreeSet;
 
+@SuperBuilder
 public class Materie {
-
+    private int id;
     private Profesor profesor;
     private AllMaterii numeMaterie;
     private int credite;

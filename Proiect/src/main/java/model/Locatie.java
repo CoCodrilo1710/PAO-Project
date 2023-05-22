@@ -1,9 +1,13 @@
 package model;
 
+import lombok.experimental.SuperBuilder;
+
 import java.util.Objects;
 
+@SuperBuilder
 public class Locatie {
 
+    private int id;
     private String nume;
     private String adresa;
     private String oras;
@@ -64,6 +68,14 @@ public class Locatie {
 
     public void setTara(String tara) {
         this.tara = tara;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override

@@ -1,8 +1,11 @@
 package model;
 
-import java.util.TreeSet;
+import lombok.experimental.SuperBuilder;
 
+import java.util.TreeSet;
+@SuperBuilder
 public class Grupa {
+    private int id;
     private static int numarStudenti;
 
     static {
@@ -11,14 +14,13 @@ public class Grupa {
 
     private int numarGrupa;
     private TreeSet<Student> studenti;
-
     private Locatie locatie;
 
     public Grupa(Grupa x) {
+        this.id = x.id;
         this.numarGrupa = x.numarGrupa;
         this.studenti = x.studenti;
         this.locatie = x.locatie;
-
     }
 
     public Grupa(int nrgrupa, Locatie locatie) {
@@ -44,6 +46,10 @@ public class Grupa {
         return numarGrupa;
     }
 
+    public String getNumarGrupaString() {
+        return String.valueOf(numarGrupa);
+    }
+
     public void setNumarGrupa(int numarGrupa) {
         this.numarGrupa = numarGrupa;
     }
@@ -64,5 +70,12 @@ public class Grupa {
         this.locatie = locatie;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
 }

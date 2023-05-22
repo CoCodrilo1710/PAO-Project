@@ -1,28 +1,25 @@
 package model;
 
+import lombok.experimental.SuperBuilder;
 import model.abstracts.Persoana;
 
 import java.util.Objects;
 
+@SuperBuilder
 public class Profesor extends Persoana {
-    private static int id;
+    private int id;
     private String email;
     private int salariu;
     private String rank;
-
-    public Profesor() {
-        super();
-    }
 
     public Profesor(String cnp, String prenume, String nume, String email, String rank, int salariu) {
         super(cnp, prenume, nume);
         this.email = email;
         this.rank = rank;
         this.salariu = salariu;
-        id++;
     }
 
-    public static int getterId() {
+    public int getterId() {
         return id;
     }
 
