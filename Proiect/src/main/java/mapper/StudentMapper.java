@@ -40,4 +40,25 @@ public class StudentMapper {
         }
         return studentList;
     }
+
+    public Optional<Student> mapToStudent(ResultSet resultSet) {
+        try {
+            if (resultSet.next()) {
+                return Optional.of(Student.builder()
+                        .id(resultSet.getInt(1))
+                        .cnp(resultSet.getString(2))
+                        .nume(resultSet.getString(3))
+                        .prenume(resultSet.getString(4))
+                        .studentEmail(resultSet.getString(5))
+                        .nrTelefon(resultSet.getString(6))
+                        .andeStudiu(resultSet.getInt(10))
+                        .semestru(resultSet.getInt(9))
+                        .build()
+                );
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return Optional.empty();
+    }
 }

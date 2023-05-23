@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ffabfbb-abef-4f35-a2cb-dc5c0bc15d44" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/LocatieRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/ProfesorRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/impl/LocatieRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/impl/ProfesorRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/StudentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/impl/StudentRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mapper/ProfesorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapper/ProfesorMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Profesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Profesor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/impl/GrupaRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/GrupaRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapper/StudentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/impl/ProfesorRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/ProfesorRepositoryImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +72,7 @@
       <workItem from="1683738644767" duration="30453000" />
       <workItem from="1684488291913" duration="20460000" />
       <workItem from="1684756217295" duration="10000" />
-      <workItem from="1684756249066" duration="18036000" />
+      <workItem from="1684756249066" duration="21793000" />
     </task>
     <servers />
   </component>

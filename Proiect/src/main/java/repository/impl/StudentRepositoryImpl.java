@@ -2,9 +2,9 @@ package repository.impl;
 
 import config.DatabaseConfiguration;
 import mapper.ProfesorMapper;
-import model.Profesor;
-import org.apache.commons.lang3.ObjectUtils;
-import repository.ProfesorRepository;
+import mapper.StudentMapper;
+import model.Student;
+import repository.StudentRepository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,10 +13,10 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
-public class ProfesorRepositoryImpl implements ProfesorRepository {
-    private static final ProfesorMapper profesorMapper = ProfesorMapper.getInstance();
+public class StudentRepositoryImpl implements StudentRepository {
+    private static final StudentMapper studentMapper = StudentMapper.getInstance();
     @Override
-    public Optional<Profesor> getObjectById(int id) {
+    public Optional<Student> getObjectById(int id) {
         String selectSql = "SELECT * FROM persoana WHERE id=?";
 
         try (Connection connection = DatabaseConfiguration.getDatabaseConnection()) {
@@ -24,7 +24,7 @@ public class ProfesorRepositoryImpl implements ProfesorRepository {
             preparedStatement.setObject(1, id);
 
             ResultSet resultSet = preparedStatement.executeQuery();
-            return profesorMapper.mapToProfesor(resultSet);
+            return studentMapper.mapToStudent(resultSet);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -33,10 +33,10 @@ public class ProfesorRepositoryImpl implements ProfesorRepository {
 
     @Override
     public void deleteObjectById(int id) {
-        String deleteProfesorSql = "DELETE FROM persoana WHERE id=?";
+        String deleteStudentSql = "DELETE FROM persoana WHERE id=?";
 
         try (Connection connection = DatabaseConfiguration.getDatabaseConnection()) {
-            PreparedStatement preparedStatement = connection.prepareStatement(deleteProfesorSql);
+            PreparedStatement preparedStatement = connection.prepareStatement(deleteStudentSql);
             preparedStatement.setObject(1, id);
 
             preparedStatement.executeUpdate();
@@ -46,25 +46,27 @@ public class ProfesorRepositoryImpl implements ProfesorRepository {
     }
 
     @Override
-    public void updateObjectById(int id, Profesor newObject) {
-        String updateProfesorSql = "UPDATE locatie \n" +
+    public void updateObjectById(int id, Student newObject) {
+        String updateStudentSql = "UPDATE locatie \n" +
                 "SET cnp=? ,\n" +
                 "nume=? ,\n" +
                 "prenume=? ,\n" +
                 "email=? ,\n" +
-                "rank=? ,\n" +
-                "salariu=?\n" +
+                "telefon=? ,\n" +
+                "semestru=? ,\n" +
+                "andestudiu=?\n" +
                 "WHERE id=?";
 
         try (Connection connection = DatabaseConfiguration.getDatabaseConnection()) {
-            PreparedStatement preparedStatement = connection.prepareStatement(updateProfesorSql);
+            PreparedStatement preparedStatement = connection.prepareStatement(updateStudentSql);
             preparedStatement.setString(1, newObject.getCnp());
             preparedStatement.setString(2, newObject.getNume());
             preparedStatement.setString(3, newObject.getPrenume());
-            preparedStatement.setString(4, newObject.getEmail());
-            preparedStatement.setString(5, newObject.getRank());
-            preparedStatement.setInt(6, newObject.getSalariu());
-            preparedStatement.setObject(7, id);
+            preparedStatement.setString(4, newObject.getStudentEmail());
+            preparedStatement.setString(5, newObject.getNrTelefon());
+            preparedStatement.setInt(6, newObject.getsemestru());
+            preparedStatement.setInt(7, newObject.getAndeStudiu());
+            preparedStatement.setObject(8, id);
 
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
@@ -73,21 +75,21 @@ public class ProfesorRepositoryImpl implements ProfesorRepository {
     }
 
     @Override
-    public void addNewObject(Profesor profesor) {
+    public void addNewObject(Student student) {
         String insertSql = "INSERT INTO persoana (id, cnp, nume, prenume, email, telefon, rank, salariu, semestru, andestudiu, idgrupa) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try (Connection connection = DatabaseConfiguration.getDatabaseConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(insertSql);
-            preparedStatement.setInt(1, profesor.getId());
-            preparedStatement.setString(2, profesor.getCnp());
-            preparedStatement.setString(3, profesor.getNume());
-            preparedStatement.setString(4, profesor.getPrenume());
-            preparedStatement.setString(5, profesor.getEmail());
-            preparedStatement.setString(6, "");
-            preparedStatement.setString(7, profesor.getRank());
-            preparedStatement.setInt(8, profesor.getSalariu());
-            preparedStatement.setObject(9, null);
-            preparedStatement.setObject(10, null);
+            preparedStatement.setInt(1, student.getId());
+            preparedStatement.setString(2, student.getCnp());
+            preparedStatement.setString(3, student.getNume());
+            preparedStatement.setString(4, student.getPrenume());
+            preparedStatement.setString(5, student.getStudentEmail());
+            preparedStatement.setString(6, student.getNrTelefon());
+            preparedStatement.setObject(7, null);
+            preparedStatement.setObject(8, null);
+            preparedStatement.setInt(9, student.getsemestru());
+            preparedStatement.setInt(10, student.getAndeStudiu());
             preparedStatement.setInt(11, 1);
 
             preparedStatement.executeUpdate();
@@ -97,13 +99,13 @@ public class ProfesorRepositoryImpl implements ProfesorRepository {
     }
 
     @Override
-    public List<Profesor> getAllObjects()
-    {
-        String selectSql = "SELECT * FROM persoana WHERE rank is not NULL";
+    public List<Student> getAllObjects() {
+
+        String selectSql = "SELECT * FROM persoana WHERE andestudiu is not NULL";
         try (Connection connection = DatabaseConfiguration.getDatabaseConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(selectSql);
             ResultSet resultSet = preparedStatement.executeQuery();
-            return profesorMapper.mapListToProfesor(resultSet);
+            return studentMapper.listMapToStudent(resultSet);
         } catch (SQLException e) {
             e.printStackTrace();
         }
