@@ -61,4 +61,11 @@ public class Profesor extends Persoana {
         return Objects.hash(super.hashCode(), email, salariu);
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

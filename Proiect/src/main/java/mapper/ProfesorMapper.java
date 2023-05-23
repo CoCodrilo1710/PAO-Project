@@ -1,12 +1,12 @@
 package mapper;
 
 import model.Profesor;
-import model.Student;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class ProfesorMapper {
 
@@ -40,4 +40,23 @@ public class ProfesorMapper {
 
     }
 
+    public Optional<Profesor> mapToProfesor(ResultSet resultSet) {
+        try {
+            if (resultSet.next()) {
+                return Optional.of(Profesor.builder()
+                        .id(resultSet.getInt(1))
+                        .cnp(resultSet.getString(2))
+                        .nume(resultSet.getString(3))
+                        .prenume(resultSet.getString(4))
+                        .email(resultSet.getString(5))
+                        .rank(resultSet.getString(7))
+                        .salariu(resultSet.getInt(8))
+                        .build()
+                );
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return Optional.empty();
+    }
 }

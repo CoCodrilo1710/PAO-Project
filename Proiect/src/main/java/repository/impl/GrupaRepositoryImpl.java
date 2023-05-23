@@ -33,10 +33,10 @@ public class GrupaRepositoryImpl implements GrupaRepository {
 
     @Override
     public void deleteObjectById(int id) {
-        String updateGrupaSql = "DELETE FROM grupa WHERE id=?";
+        String deleteGrupaSql = "DELETE FROM grupa WHERE id=?";
 
         try (Connection connection = DatabaseConfiguration.getDatabaseConnection()) {
-            PreparedStatement preparedStatement = connection.prepareStatement(updateGrupaSql);
+            PreparedStatement preparedStatement = connection.prepareStatement(deleteGrupaSql);
             preparedStatement.setObject(1, id);
 
             preparedStatement.executeUpdate();
