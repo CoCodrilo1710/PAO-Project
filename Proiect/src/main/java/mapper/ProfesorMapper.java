@@ -1,6 +1,6 @@
 package mapper;
 
-import model.Profesor;
+import model.abstractsSealed.Profesor;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

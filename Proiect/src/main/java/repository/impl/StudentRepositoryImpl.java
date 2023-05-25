@@ -2,7 +2,7 @@ package repository.impl;
 
 import config.DatabaseConfiguration;
 import mapper.StudentMapper;
-import model.Student;
+import model.abstractsSealed.Student;
 import repository.StudentRepository;
 
 import java.sql.Connection;

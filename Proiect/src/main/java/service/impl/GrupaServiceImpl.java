@@ -1,6 +1,8 @@
 package service.impl;
 
 import model.*;
+import model.abstractsSealed.Profesor;
+import model.abstractsSealed.Student;
 import repository.impl.MateriiRepositoryImpl;
 import repository.impl.NoteRepositoryImpl;
 import service.GrupaService;

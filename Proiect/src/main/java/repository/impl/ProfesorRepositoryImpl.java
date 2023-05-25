@@ -2,8 +2,7 @@ package repository.impl;
 
 import config.DatabaseConfiguration;
 import mapper.ProfesorMapper;
-import model.Profesor;
-import org.apache.commons.lang3.ObjectUtils;
+import model.abstractsSealed.Profesor;
 import repository.ProfesorRepository;
 
 import java.sql.Connection;

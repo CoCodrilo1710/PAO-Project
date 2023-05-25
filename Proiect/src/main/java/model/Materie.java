@@ -1,6 +1,7 @@
 package model;
 
 import lombok.experimental.SuperBuilder;
+import model.abstractsSealed.Profesor;
 import model.enums.AllMaterii;
 
 import java.time.LocalDate;

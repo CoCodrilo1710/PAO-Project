@@ -1,7 +1,7 @@
 package service.impl;
 
 import model.Materie;
-import model.Student;
+import model.abstractsSealed.Student;
 import service.MedieCalculator;
 
 public class MedieAritmeticaImpl implements service.MedieCalculator{

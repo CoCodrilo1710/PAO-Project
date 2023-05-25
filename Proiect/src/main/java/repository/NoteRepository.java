@@ -2,7 +2,7 @@ package repository;
 
 import model.FormaNota;
 import model.Materie;
-import model.Student;
+import model.abstractsSealed.Student;
 
 import java.util.ArrayList;
 

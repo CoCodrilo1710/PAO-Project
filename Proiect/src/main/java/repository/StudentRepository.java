@@ -1,6 +1,6 @@
 package repository;
 
-import model.Student;
+import model.abstractsSealed.Student;
 
 import java.util.Optional;
 import java.util.TreeSet;

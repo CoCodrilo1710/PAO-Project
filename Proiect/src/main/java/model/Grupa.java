@@ -1,6 +1,7 @@
 package model;
 
 import lombok.experimental.SuperBuilder;
+import model.abstractsSealed.Student;
 
 import java.util.TreeSet;
 @SuperBuilder

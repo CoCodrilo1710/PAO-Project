@@ -1,11 +1,11 @@
-package model.abstracts;
+package model.abstractsSealed;
 
 import lombok.experimental.SuperBuilder;
 
 import java.util.Objects;
 
 @SuperBuilder
-public abstract class Persoana {
+public abstract sealed class Persoana permits Student, Profesor {
     private String cnp;
     private String prenume;
     private String nume;

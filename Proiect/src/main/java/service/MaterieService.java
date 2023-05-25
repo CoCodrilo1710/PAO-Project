@@ -1,7 +1,7 @@
 package service;
 
 import model.Materie;
-import model.Profesor;
+import model.abstractsSealed.Profesor;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

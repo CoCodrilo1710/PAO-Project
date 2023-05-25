@@ -1,5 +1,6 @@
 package service.impl;
 
+import model.abstractsSealed.Student;
 import service.MedieCalculator;
 
 public class MediePonderataImpl implements service.MedieCalculator{
@@ -7,7 +8,7 @@ public class MediePonderataImpl implements service.MedieCalculator{
         return new MediePonderataImpl();
     }
 
-    public double calculeazaMedie(model.Student x) {
+    public double calculeazaMedie(Student x) {
 
         MaterieServiceImpl mainMaterii = new MaterieServiceImpl();
         int suma = 0;

@@ -1,7 +1,7 @@
 package service.impl;
 
 import service.ProfesorService;
-import model.Profesor;
+import model.abstractsSealed.Profesor;
 
 public class ProfesorServiceImpl implements ProfesorService {
 

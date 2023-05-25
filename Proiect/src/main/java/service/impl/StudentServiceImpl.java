@@ -1,14 +1,11 @@
 package service.impl;
 
-import exceptions.OutOfRangeInputException;
-import service.MaterieService;
 import service.StudentService;
 import model.Materie;
-import model.Student;
+import model.abstractsSealed.Student;
 import model.FormaNota;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 

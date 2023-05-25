@@ -1,15 +1,9 @@
 package mapper;
 
-import com.sun.source.tree.Tree;
-import model.Grupa;
-import model.Locatie;
-import model.Student;
-import org.apache.commons.collections4.queue.PredicatedQueue;
+import model.abstractsSealed.Student;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 import java.util.TreeSet;
 

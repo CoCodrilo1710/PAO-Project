@@ -1,11 +1,7 @@
 package application;
 
 import model.Grupa;
-import model.Student;
 import service.impl.GrupaServiceImpl;
-
-import java.util.List;
-import java.util.TreeSet;
 
 public class VerifyAverageThread implements Runnable {
     private Grupa grupa;

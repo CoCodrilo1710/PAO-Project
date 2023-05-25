@@ -3,9 +3,8 @@ package repository.impl;
 import config.DatabaseConfiguration;
 import mapper.NoteMapper;
 import model.FormaNota;
-import model.Locatie;
 import model.Materie;
-import model.Student;
+import model.abstractsSealed.Student;
 import repository.NoteRepository;
 
 import java.sql.*;

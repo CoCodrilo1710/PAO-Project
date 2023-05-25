@@ -1,6 +1,6 @@
 package service;
 
-import model.Profesor;
+import model.abstractsSealed.Profesor;
 
 public interface ProfesorService {
     void afisareProfesor(Profesor x);

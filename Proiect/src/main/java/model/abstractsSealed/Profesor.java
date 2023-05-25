@@ -1,12 +1,11 @@
-package model;
+package model.abstractsSealed;
 
 import lombok.experimental.SuperBuilder;
-import model.abstracts.Persoana;
 
 import java.util.Objects;
 
 @SuperBuilder
-public class Profesor extends Persoana {
+public final class Profesor extends Persoana {
     private int id;
     private String email;
     private int salariu;

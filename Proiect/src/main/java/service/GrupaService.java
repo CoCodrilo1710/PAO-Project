@@ -1,7 +1,7 @@
 package service;
 
-import model.Profesor;
-import model.Student;
+import model.abstractsSealed.Profesor;
+import model.abstractsSealed.Student;
 import model.Grupa;
 
 import java.util.Optional;

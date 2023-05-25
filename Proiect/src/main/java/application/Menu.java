@@ -4,10 +4,9 @@ import csv.CsvWriter;
 import exceptions.InvalidNameException;
 import exceptions.OutOfRangeInputException;
 import exceptions.UnknownStudentException;
-import repository.LocatieRepository;
-import repository.StudentRepository;
+import model.abstractsSealed.Profesor;
+import model.abstractsSealed.Student;
 import repository.impl.*;
-import service.MaterieService;
 import service.impl.*;
 import model.*;
 

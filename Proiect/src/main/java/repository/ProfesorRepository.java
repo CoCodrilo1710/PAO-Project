@@ -1,11 +1,9 @@
 package repository;
 
-import model.Profesor;
+import model.abstractsSealed.Profesor;
 
-import javax.swing.*;
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 public interface ProfesorRepository {
 

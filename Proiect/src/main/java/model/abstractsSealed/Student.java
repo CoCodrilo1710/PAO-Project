@@ -1,7 +1,7 @@
-package model;
+package model.abstractsSealed;
 
 import lombok.experimental.SuperBuilder;
-import model.abstracts.Persoana;
+import model.Materie;
 import service.MedieCalculator;
 
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.Comparator;
 import java.util.Objects;
 
 @SuperBuilder
-public class Student extends Persoana implements Comparable<Student> {
+public final class Student extends Persoana implements Comparable<Student> {
     private int id;
     private String studentEmail;
     private String nrTelefon;

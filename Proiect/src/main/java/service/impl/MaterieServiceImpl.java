@@ -2,7 +2,7 @@ package service.impl;
 
 import service.MaterieService;
 import model.Materie;
-import model.Profesor;
+import model.abstractsSealed.Profesor;
 import model.enums.AllMaterii;
 
 import java.time.LocalDate;
