@@ -1,7 +1,41 @@
 # PAO-Project
 Digital Classbok V2.0 ( Java Edition &lt;3 )
 
-# Definirea sistemului
+# Partea a II-a
+
+## Repositories and Mappers
+Am implementat Repositories and Mappers pentru clasele prezente in proiect. Sunt acoperite pentru majoritatea dintre ele operatiile CRUD precum si anumite adaugiri.
+
+## Threads 
+Am facut un Thread ce verifica din secunda in secunda mediile studentilor si le da update si mai da update la o variabila de tip Boolean ( Restanta ) din clasa Materie pentru fiecare student prezent in grupa.
+
+
+## Logging and CSV Writing
+Este implementat un sistem de Logging integrat cu cel de CSV Writing pentru a stoca toate actiunile facute de user in aplicatie.
+
+## Design Patterns
+Sunt prezente 2 Design Patterns in acest proiect. Primul este Singleton de tip Creational prezent in mai toate clasele de Repositories si in clasa de Meniu. 
+Cel de-al doilea este Strategy de tip behavioral implementat la nivelul clasei Student unde hotarasc la runtime tipul de medie care se va calcula pentru un student( user-ul hotaraste asta )
+
+## Exceptii
+Sunt dezvoltate 3 tipuri de exceptii Custom:
+- InvalidNameException
+- OutOfRangeInputException
+- UnknownStudentException
+
+## Baza de Date
+Baza de date este dezvoltata pe un BackEnd PostGreSQL deployed pe un Docker local. Ma conectez la ea folosind jdbc. 
+Are in componenta sa 7 tabele.
+
+## Clasa Sealed
+Am transformat clasa Persoana intr-o clasa Sealed cu permitere pentru Student si Profesor.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# Partea I
+
+## Definirea sistemului
 Aceasta aplicatie simuleaza un catalog online construit pe planul unui grupe studentesti cu un numar dat de studenti! ( sau pe baza unei clase dintr-o scoala)
 
 Sistemul vine in ajutorul Secretariatului unei Facultati/Scoli care doreste sa faca o clasificare a studentilor 
@@ -91,5 +125,3 @@ Cum am scris anterior, clasele Serviciu prezente in aplicatie, anume:
 #### Sortarea studentilor este facuta cu ajutorul unui comparator definit in clasa Student unde compar studentii pe baza mediei
 
 
-# Improvements ( pe viitor :) )
-In apropierea deadline-ului m-am gandit la o noua abordare a proiectului, anume: Folosirea unor HashMap-uri pentru note/absente unde cheile sa fie Materiile si valorile, notele.
