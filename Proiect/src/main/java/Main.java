@@ -35,6 +35,6 @@ public class Main {
 
 
         Menu serviceCentral = Menu.getInstance();
-        serviceCentral.firstRead();
+        serviceCentral.getRequirementsForLastPart();
     }
 }

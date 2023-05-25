@@ -68,4 +68,14 @@ public class Profesor extends Persoana {
     public void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return  "cnp = '" + getCnp() + '\'' + "\n" +
+                "nume = '" + getNume() + '\'' + "\n" +
+                "prenume = '" + getPrenume() + '\'' + "\n" +
+                "email = '" + email + '\'' + "\n" +
+                "salariu = " + salariu + "\n"+
+                "rank = '" + rank + "' \n";
+    }
 }

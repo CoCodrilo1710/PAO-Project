@@ -4,6 +4,8 @@ import model.Profesor;
 import model.Student;
 import model.Grupa;
 
+import java.util.Optional;
+
 public interface GrupaService {
 
     void afisareGrupa(model.Grupa x);
@@ -35,4 +37,6 @@ public interface GrupaService {
     Student getStudentByCNP(Grupa x, String cnp);
 
     int getterNrStudenti(Grupa x);
+
+    void firstStartDB(Optional<Grupa> grupa);
 }

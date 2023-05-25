@@ -16,12 +16,14 @@ public class MaterieServiceImpl implements MaterieService {
         for (AllMaterii materie : AllMaterii.values()) {
             Materie local = new Materie();
             local.setNumeMaterie(materie);
+            local.setId(i);
             switch (materie) {
-                case FLP, PAO -> local.setCredite(5);
+                case PAO, FLP -> local.setCredite(5);
                 case MDS, ALGORITMI_AVANSATI -> local.setCredite(4);
                 case INTELIGENTA_ARTIFICIALA -> local.setCredite(3);
                 case ENGLEZA -> local.setCredite(2);
             }
+            i++;
             localVector.add(local);
         }
     }

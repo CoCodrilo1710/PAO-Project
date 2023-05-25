@@ -21,4 +21,6 @@ public interface StudentService {
 
     Student returnStudent();
 
+    Materie getMateriebyId(Student x, int id);
+
 }

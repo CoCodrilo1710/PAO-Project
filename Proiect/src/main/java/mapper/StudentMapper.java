@@ -1,5 +1,6 @@
 package mapper;
 
+import com.sun.source.tree.Tree;
 import model.Grupa;
 import model.Locatie;
 import model.Student;
@@ -10,6 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.TreeSet;
 
 
 public class StudentMapper {
@@ -22,8 +24,8 @@ public class StudentMapper {
         return INSTANCE;
     }
 
-    public ArrayList<Student> listMapToStudent(ResultSet resultSet) throws SQLException {
-        ArrayList<Student> studentList = new ArrayList<>();
+    public TreeSet<Student> listMapToStudent(ResultSet resultSet) throws SQLException {
+        TreeSet<Student> studentList = new TreeSet<>();
         while (resultSet.next()) {
             studentList.add(Student.builder()
                     .id(resultSet.getInt(1))

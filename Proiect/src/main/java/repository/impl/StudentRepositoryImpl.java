@@ -1,7 +1,6 @@
 package repository.impl;
 
 import config.DatabaseConfiguration;
-import mapper.ProfesorMapper;
 import mapper.StudentMapper;
 import model.Student;
 import repository.StudentRepository;
@@ -10,8 +9,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
 import java.util.Optional;
+import java.util.TreeSet;
 
 public class StudentRepositoryImpl implements StudentRepository {
     private static final StudentMapper studentMapper = StudentMapper.getInstance();
@@ -74,13 +73,31 @@ public class StudentRepositoryImpl implements StudentRepository {
         }
     }
 
+    public int getLastId() {
+        String selectSql = "SELECT MAX(id) FROM persoana";
+
+        int lastId = 0;
+        try (Connection connection = DatabaseConfiguration.getDatabaseConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(selectSql);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                lastId = resultSet.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return lastId;
+    }
+
     @Override
     public void addNewObject(Student student) {
         String insertSql = "INSERT INTO persoana (id, cnp, nume, prenume, email, telefon, rank, salariu, semestru, andestudiu, idgrupa) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
+        int lastId = getLastId();
         try (Connection connection = DatabaseConfiguration.getDatabaseConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(insertSql);
-            preparedStatement.setInt(1, student.getId());
+            preparedStatement.setObject(1, lastId+1);
             preparedStatement.setString(2, student.getCnp());
             preparedStatement.setString(3, student.getNume());
             preparedStatement.setString(4, student.getPrenume());
@@ -99,7 +116,7 @@ public class StudentRepositoryImpl implements StudentRepository {
     }
 
     @Override
-    public List<Student> getAllObjects() {
+    public TreeSet<Student> getAllObjects() {
 
         String selectSql = "SELECT * FROM persoana WHERE andestudiu is not NULL";
         try (Connection connection = DatabaseConfiguration.getDatabaseConnection()) {

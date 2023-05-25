@@ -4,6 +4,10 @@ import csv.CsvWriter;
 import exceptions.InvalidNameException;
 import exceptions.OutOfRangeInputException;
 import exceptions.UnknownStudentException;
+import repository.LocatieRepository;
+import repository.StudentRepository;
+import repository.impl.*;
+import service.MaterieService;
 import service.impl.*;
 import model.*;
 
@@ -11,9 +15,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Menu {
 
@@ -33,6 +35,393 @@ public class Menu {
         } catch (Exception e) {
 
         }
+    }
+
+    public void getRequirementsForLastPart() throws IOException {
+        GrupaRepositoryImpl grupaRepository = new GrupaRepositoryImpl();
+        GrupaServiceImpl grupaService = new GrupaServiceImpl();
+        StudentServiceImpl studentService = new StudentServiceImpl();
+        ProfesorServiceImpl profesorService = new ProfesorServiceImpl();
+        MaterieServiceImpl materieService = new MaterieServiceImpl();
+        LocatieRepositoryImpl locatieRepository = new LocatieRepositoryImpl();
+        ProfesorRepositoryImpl profesorRepository = new ProfesorRepositoryImpl();
+        StudentRepositoryImpl studentRepository = new StudentRepositoryImpl();
+        MateriiRepositoryImpl materiiRepository = new MateriiRepositoryImpl();
+        NoteRepositoryImpl noteRepository = new NoteRepositoryImpl();
+        MaterieServiceImpl maintainLocalMaterii = new MaterieServiceImpl();
+
+        Optional<Grupa> grupa = grupaRepository.getObjectById(1);
+        TreeSet<Student> studenti = studentRepository.getAllObjects();
+        List<Profesor> profesori = profesorRepository.getAllObjects();
+        Locatie locatie = locatieRepository.getObjectById(1).get();
+
+        grupa.get().setLocatie(locatie);
+        grupa.get().setStudenti(studenti);
+
+        ok = 1;
+        meniuLastPart(grupa);
+    }
+
+    public void meniuLastPart(Optional<Grupa> grupa) throws IOException {
+        GrupaRepositoryImpl grupaRepository = new GrupaRepositoryImpl();
+        GrupaServiceImpl grupaService = new GrupaServiceImpl();
+        StudentServiceImpl serviciiStudent = new StudentServiceImpl();
+        ProfesorServiceImpl profesorService = new ProfesorServiceImpl();
+        MaterieServiceImpl materieService = new MaterieServiceImpl();
+        LocatieRepositoryImpl locatieRepository = new LocatieRepositoryImpl();
+        ProfesorRepositoryImpl profesorRepository = new ProfesorRepositoryImpl();
+        StudentRepositoryImpl studentRepository = new StudentRepositoryImpl();
+        MateriiRepositoryImpl materiiRepository = new MateriiRepositoryImpl();
+        NoteRepositoryImpl noteRepository = new NoteRepositoryImpl();
+        MaterieServiceImpl maintainLocalMaterii = new MaterieServiceImpl();
+
+        grupaService.firstStartDB(grupa);
+
+        if (ok==1) {
+            verificareMedie = new VerifyAverageThread(grupa.get());
+            Thread thread = new Thread(verificareMedie);
+            thread.start();
+        }
+        parseCommand("Intrare Meniu Principal");
+
+        System.out.println("1. Afisare intreaga grupa");
+        System.out.println("2. Afisare student dupa nume si prenume");
+        System.out.println("3. Afisare profesori");
+        System.out.println("4. Afisare materii");
+        System.out.println("5. Adaugare note unui student");
+        System.out.println("6. Adaugare student");
+        System.out.println("7. Iesire din aplicatie");
+
+        ok = 0;
+        Scanner var = new Scanner(System.in);
+        int optiune = var.nextInt();
+        System.out.println();
+        System.out.println();
+        switch (optiune)
+        {
+            case 1 -> {
+                parseCommand("Afisare intreaga grupa");
+                System.out.println("Afisare intreaga grupa");
+                System.out.println();
+                System.out.println();
+                grupaService.afisareGrupa(grupa.get());
+                System.out.println();
+                System.out.println();
+                System.out.println("Afisarea s-a terminat! \nLa apasarea tastei ENTER va va trimite in meniul aplicatiei!");
+                String temp1 = var.nextLine();
+                String key = var.nextLine();
+                int numRowsInConsole = 60;
+                if (key.equals("")) {
+                    for (int iii = 0; iii < numRowsInConsole; iii++) {
+                        System.out.println();
+                    }
+                }
+                meniuLastPart(grupa);
+            }
+
+            case 2 ->{
+
+                parseCommand("Afisare student dupa nume si prenume");
+                System.out.println("Afisare student dupa nume si prenume");
+                System.out.println();
+                System.out.println();
+                System.out.println("Introduceti numele studentului: ");
+                String nume;
+
+                while (true) {
+                    try {
+                        nume = var.next();
+                        String regex = "^[a-zA-Z]+$";
+                        if (!nume.matches(regex)) {
+                            throw new InvalidNameException("Numele trebuie sa contina doar litere!");
+                        }
+                        break;
+                    } catch (InvalidNameException e) {
+                        System.out.println(e.getMessage());
+                        System.out.println("Reincercati prin apasarea tastei ENTER! Dupa ce ce goleste ecranul introduceti direct valoarea!");
+                        String temp = var.nextLine();
+                        String key = var.nextLine();
+                        if (key.equals("")) {
+                            int numRowsInConsole = 60;
+                            for (int iii = 0; iii < numRowsInConsole; iii++) {
+                                System.out.println();
+                            }
+                        }
+
+                    }
+                }
+                System.out.println("Introduceti prenumele studentului: ");
+
+                String prenume;
+                while (true) {
+                    try {
+                        prenume = var.next();
+                        String regex = "^[a-zA-Z]+$";
+                        if (!prenume.matches(regex)) {
+                            throw new InvalidNameException("Prenumele trebuie sa contina doar litere!");
+                        }
+                        break;
+                    } catch (InvalidNameException e) {
+                        System.out.println(e.getMessage());
+                        System.out.println("Reincercati prin apasarea tastei ENTER! Dupa ce ce goleste ecranul introduceti direct valoarea!");
+                        String temp = var.nextLine();
+                        String key = var.nextLine();
+                        if (key.equals("")) {
+                            int numRowsInConsole = 60;
+                            for (int iii = 0; iii < numRowsInConsole; iii++) {
+                                System.out.println();
+                            }
+                        }
+
+                    }
+                }
+                System.out.println();
+
+                if (grupaService.exitaStudent(grupa.get(), nume, prenume)) {
+                    Student ty = grupaService.getStudentByName(grupa.get(), nume, prenume);
+                    serviciiStudent.afisareStudent(ty);
+                    System.out.println();
+                    System.out.println();
+                    System.out.println("Afisarea s-a terminat! \nLa apasarea tastei ENTER va va trimite in meniul aplicatiei!");
+                    String temp1 = var.nextLine();
+                    String key = var.nextLine();
+                    int numRowsInConsole = 60;
+                    if (key.equals("")) {
+                        for (int iii = 0; iii < numRowsInConsole; iii++) {
+                            System.out.println();
+                        }
+                    }
+
+                    meniuLastPart(grupa);
+
+                } else {
+                    try {
+                        throw new UnknownStudentException(nume, prenume);
+                    } catch (UnknownStudentException e) {
+                        System.out.println(e.getMessage());
+                        System.out.println("Reincercati! \nLa apasarea tastei ENTER va va trimite in meniul aplicatiei!");
+                        String temp1 = var.nextLine();
+                        String key = var.nextLine();
+                        int numRowsInConsole = 60;
+                        if (key.equals("")) {
+                            for (int iii = 0; iii < numRowsInConsole; iii++) {
+                                System.out.println();
+                            }
+                        }
+                        meniuLastPart(grupa);
+                    }
+                }
+            }
+
+            case 3->{
+                parseCommand("Afisare profesori");
+                System.out.println("Afisare profesori");
+                System.out.println();
+                System.out.println();
+                for (Profesor prof: profesorRepository.getAllObjects())
+                {
+                    System.out.println(prof);
+                    System.out.println();
+                    System.out.println();
+                }
+                System.out.println();
+                System.out.println();
+                System.out.println("Afisarea s-a terminat! \nLa apasarea tastei ENTER va va trimite in meniul aplicatiei!");
+                String temp1 = var.nextLine();
+                String key = var.nextLine();
+                int numRowsInConsole = 60;
+                if (key.equals("")) {
+                    for (int iii = 0; iii < numRowsInConsole; iii++) {
+                        System.out.println();
+                    }
+                }
+                meniuLastPart(grupa);
+            }
+
+
+            case 4->{
+                parseCommand("Afisare materii");
+                System.out.println("Afisare materii");
+                System.out.println();
+                System.out.println();
+
+                for (String mat: materiiRepository.getAllMaterii())
+                {
+                    System.out.println(mat);
+                }
+
+                System.out.println();
+                System.out.println();
+                System.out.println("Afisarea s-a terminat! \nLa apasarea tastei ENTER va va trimite in meniul aplicatiei!");
+                String temp1 = var.nextLine();
+                String key = var.nextLine();
+                int numRowsInConsole = 60;
+                if (key.equals("")) {
+                    for (int iii = 0; iii < numRowsInConsole; iii++) {
+                        System.out.println();
+                    }
+                }
+                meniuLastPart(grupa);
+            }
+
+
+            case 5-> {
+
+                parseCommand("Adaugare de note unui student");
+                System.out.println("Ati ales sa adaugati note unui anumit student!");
+                System.out.println("Introduceti numele studentului: ");
+                String nume;
+
+                while (true) {
+                    try {
+                        nume = var.next();
+                        String regex = "^[a-zA-Z]+$";
+                        if (!nume.matches(regex)) {
+                            throw new InvalidNameException("Numele trebuie sa contina doar litere!");
+                        }
+                        break;
+                    } catch (InvalidNameException e) {
+                        System.out.println(e.getMessage());
+                        System.out.println("Reincercati prin apasarea tastei ENTER! Dupa ce ce goleste ecranul introduceti direct valoarea!");
+                        String temp = var.nextLine();
+                        String key = var.nextLine();
+                        if (key.equals("")) {
+                            int numRowsInConsole = 60;
+                            for (int iii = 0; iii < numRowsInConsole; iii++) {
+                                System.out.println();
+                            }
+                        }
+
+                    }
+                }
+                System.out.println("Introduceti prenumele studentului: ");
+
+                String prenume;
+                while (true) {
+                    try {
+                        prenume = var.next();
+                        String regex = "^[a-zA-Z]+$";
+                        if (!prenume.matches(regex)) {
+                            throw new InvalidNameException("Prenumele trebuie sa contina doar litere!");
+                        }
+                        break;
+                    } catch (InvalidNameException e) {
+                        System.out.println(e.getMessage());
+                        System.out.println("Reincercati prin apasarea tastei ENTER! Dupa ce ce goleste ecranul introduceti direct valoarea!");
+                        String temp = var.nextLine();
+                        String key = var.nextLine();
+                        if (key.equals("")) {
+                            int numRowsInConsole = 60;
+                            for (int iii = 0; iii < numRowsInConsole; iii++) {
+                                System.out.println();
+                            }
+                        }
+
+                    }
+                }
+                System.out.println();
+
+                if (grupaService.exitaStudent(grupa.get(), nume, prenume)) {
+
+                    Student ty = grupaService.getStudentByName(grupa.get(), nume, prenume);
+
+                    System.out.println("Cate note doriti sa adaugati? ");
+                    int numar_note = var.nextInt();
+                    for (int ii = 0; ii < numar_note; ii++) {
+
+                        materieService.afisareMaterii();
+                        System.out.println("Introduceti numarul materiei pentru nota pe care doriti sa o adaugati: ");
+                        int numar_materie = var.nextInt();
+                        System.out.println("Introduceti nota: ");
+                        int nota = var.nextInt();
+                        System.out.println("Introduceti data: (sub FormaNota zz.ll");
+                        String data = var.next();
+
+                        data = data + ".2022";
+                        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.uuuu");
+                        LocalDate final1 = LocalDate.parse(data, formatter);
+
+                        serviciiStudent.adaugaNota(ty, numar_materie, nota, final1);
+                        noteRepository.addNewObject(ty, ty.getSituatie().get(numar_materie), new FormaNota(nota, final1));
+                        System.out.println();
+                        System.out.println();
+                    }
+                    if (numar_note > 0)
+                        System.out.println("Adaugarea a fost efectuata! \nLa apasarea tastei ENTER va va trimite in meniul aplicatiei!");
+                    else
+                        System.out.println("Nu ati introdus nicio nota! \nLa apasarea tastei ENTER va va trimite in meniul aplicatiei!");
+
+                    String temp1 = var.nextLine();
+                    String key = var.nextLine();
+                    int numRowsInConsole = 60;
+                    if (key.equals("")) {
+                        for (int iii = 0; iii < numRowsInConsole; iii++) {
+                            System.out.println();
+                        }
+                    }
+                    meniuLastPart(grupa);
+                } else {
+                    try {
+                        throw new UnknownStudentException(nume, prenume);
+                    } catch (UnknownStudentException e) {
+                        System.out.println(e.getMessage());
+                        System.out.println("Reincercati! \nLa apasarea tastei ENTER va va trimite in meniul aplicatiei!");
+                        String temp1 = var.nextLine();
+                        String key = var.nextLine();
+                        int numRowsInConsole = 60;
+                        if (key.equals("")) {
+                            for (int iii = 0; iii < numRowsInConsole; iii++) {
+                                System.out.println();
+                            }
+                        }
+                        meniuLastPart(grupa);
+                    }
+                }
+
+            }
+
+            case 6->{
+
+                System.out.println("Ati ales sa adaugati un student!");
+                Student student = serviciiStudent.returnStudent();
+                studentRepository.addNewObject(student);
+                System.out.println();
+                System.out.println("Inserare efectuata cu succes!");
+                System.out.println("La apasarea tastei ENTER va va trimite in meniul aplicatiei!");
+                String temp1 = var.nextLine();
+                String key = var.nextLine();
+                int numRowsInConsole = 60;
+                if (key.equals("")) {
+                    for (int iii = 0; iii < numRowsInConsole; iii++) {
+                        System.out.println();
+                    }
+                }
+                TreeSet<Student> studenti = studentRepository.getAllObjects();
+                grupa.get().setStudenti(studenti);
+                meniuLastPart(grupa);
+
+            }
+
+            case 7-> {
+                System.out.println();
+                System.out.println("Multumim pentru utilizarea aplicatiei!");
+                verificareMedie.stop();
+                System.exit(0);
+            }
+            default -> {
+                System.out.println("Ati introdus o optiune gresita! \nLa apasarea tastei ENTER va va trimite in meniul aplicatiei!");
+                String temp1 = var.nextLine();
+                String key = var.nextLine();
+                int numRowsInConsole = 60;
+                if (key.equals("")) {
+                    for (int iii = 0; iii < numRowsInConsole; iii++) {
+                        System.out.println();
+                    }
+                }
+                meniuLastPart(grupa);
+            }
+        }
+
     }
 
     public void firstRead() throws IOException {

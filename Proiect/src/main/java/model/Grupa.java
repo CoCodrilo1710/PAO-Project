@@ -29,6 +29,7 @@ public class Grupa {
         this.locatie = locatie;
     }
 
+
     public static int getNumarStudenti() {
         return numarStudenti;
     }

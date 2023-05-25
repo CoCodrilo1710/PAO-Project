@@ -1,6 +1,8 @@
 package service.impl;
 
 import model.*;
+import repository.impl.MateriiRepositoryImpl;
+import repository.impl.NoteRepositoryImpl;
 import service.GrupaService;
 
 import java.time.LocalDate;
@@ -39,11 +41,10 @@ public class GrupaServiceImpl implements GrupaService {
                 System.out.println("Note: ");
                 for (model.FormaNota FormaNota : mat.getNote()) {
                     System.out.println("Nota: " + mat.getterNota(FormaNota) + " ,    Data: " + mat.getterData(FormaNota).getDayOfMonth() + "." + mat.getterData(FormaNota).getMonthValue());
-                    System.out.println();
-                    System.out.println("Media la aceasta materie este: " + mat.getMedie());
-                    System.out.println();
-                    System.out.println();
                 }
+                System.out.println();
+                System.out.println();
+                System.out.println("Media la aceasta materie este: " + mat.getMedie());
                 System.out.println();
                     System.out.println("Absente: ");
                     for (LocalDate data : mat.getAbsente()) {
@@ -212,4 +213,25 @@ public class GrupaServiceImpl implements GrupaService {
         return x.getStudenti().size();
     }
 
+    @Override
+    public void firstStartDB(Optional<Grupa> grupa) {
+        MaterieServiceImpl maintainLocalMaterii = new MaterieServiceImpl();
+        MateriiRepositoryImpl materiiRepository = new MateriiRepositoryImpl();
+        NoteRepositoryImpl noteRepository = new NoteRepositoryImpl();
+        for (Student student : grupa.get().getStudenti()) {
+
+            student.setMedieCalculator(MedieAritmeticaImpl.getInstance());
+            ArrayList<Materie> localVector = new ArrayList<>();
+            maintainLocalMaterii.setterMateri(localVector);
+            student.setSituatie(localVector);
+            for (Materie materie : student.getSituatie()) {
+                List<Integer> ids = materiiRepository.getIdMateriiByIdStudent(student.getId(), materie.getId());
+                for (Integer id : ids) {
+                    materie.setNote(noteRepository.getNoteByIdMaterieStudent(id));
+                    materie.setNrAbsente(0);
+                    materie.setNrNote(materie.getNote().size());
+                }
+            }
+        }
+    }
 }

@@ -39,17 +39,15 @@ public class Materie {
     }
 
     public int getterNota(FormaNota x) {
-        return x.nota;
+        return x.getNota();
     }
 
     public LocalDate getterData(FormaNota x) {
-        return x.data;
+        return x.getData();
     }
 
     public FormaNota getForma(int localNota, LocalDate localData) {
-        FormaNota aici = new FormaNota();
-        aici.data = localData;
-        aici.nota = localNota;
+        FormaNota aici = new FormaNota(localNota, localData);
         return aici;
     }
 
@@ -123,6 +121,14 @@ public class Materie {
 
     public void setNumeMaterie(AllMaterii numeMaterie) {
         this.numeMaterie = numeMaterie;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
 }

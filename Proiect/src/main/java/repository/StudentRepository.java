@@ -1,10 +1,9 @@
 package repository;
 
-import model.Profesor;
 import model.Student;
 
-import java.util.List;
 import java.util.Optional;
+import java.util.TreeSet;
 
 public interface StudentRepository {
     Optional<Student> getObjectById(int id);
@@ -15,6 +14,7 @@ public interface StudentRepository {
 
     void addNewObject(Student student);
 
-    List<Student> getAllObjects();
+    TreeSet<Student> getAllObjects();
 
+    int getLastId();
 }
