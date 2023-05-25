@@ -35,6 +35,33 @@ public class Main {
 
 
         Menu serviceCentral = Menu.getInstance();
+        System.out.println("Exista 2 moduri de functionare a acestei aplicatii!");
+        System.out.println("1. Modul de functionare cu baza de date");
+        System.out.println("2. Modul de functionare cu input de la tastatura");
+        System.out.println("Pentru a alege modul de functionare, tastati 1 sau 2!");
+        Scanner varCitire2 = new Scanner(System.in);
+        String key2;
+        key2 = varCitire2.nextLine();
+        if (key2.equals("1")) {
+            int numRowsInConsole = 60;
+            for (int ii = 0; ii < numRowsInConsole; ii++) {
+                System.out.println();
+            }
+
+            serviceCentral.getRequirementsForLastPart();
+
+        } else if (key2.equals("2")) {
+            int numRowsInConsole = 60;
+            for (int ii = 0; ii < numRowsInConsole; ii++) {
+                System.out.println();
+            }
+            serviceCentral.firstRead();
+
+        } else {
+            System.out.println("Ati introdus o valoare gresita!");
+            System.out.println("Aplicatia se va inchide!");
+            System.exit(0);
+        }
         serviceCentral.getRequirementsForLastPart();
     }
 }

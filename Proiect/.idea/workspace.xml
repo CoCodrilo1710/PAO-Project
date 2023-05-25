@@ -6,32 +6,42 @@
   <component name="ChangeListManager">
     <list default="true" id="5ffabfbb-abef-4f35-a2cb-dc5c0bc15d44" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/VerifyAverageThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/VerifyAverageThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mapper/ProfesorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapper/ProfesorMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapper/StudentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Grupa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Grupa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Materie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Materie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Profesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/abstracts/Profesor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/abstracts/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/abstracts/Persoana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/abstracts/Persoana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/NoteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/NoteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/ProfesorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ProfesorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/impl/NoteRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/NoteRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/impl/ProfesorRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/ProfesorRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/impl/StudentRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/StudentRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/GrupaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/GrupaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/MaterieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/MaterieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/MedieCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/MedieCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ProfesorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ProfesorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/GrupaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/GrupaServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/MaterieServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/MaterieServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/MedieAritmeticaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/MedieAritmeticaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/MediePonderataImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/MediePonderataImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/ProfesorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/ProfesorServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CsvFile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CsvFile.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ProfesorMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ProfesorMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Grupa$GrupaBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Grupa$GrupaBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Grupa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Grupa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Materie$MaterieBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Materie$MaterieBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Materie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Materie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/abstracts/Persoana$PersoanaBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/abstracts/Persoana.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/abstracts/Profesor$ProfesorBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/abstracts/Profesor$ProfesorBuilderImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/abstracts/Profesor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/abstracts/Student$StudentBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/abstracts/Student$StudentBuilderImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/abstracts/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repository/NoteRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/NoteRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repository/ProfesorRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/ProfesorRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repository/StudentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/StudentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repository/impl/NoteRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/impl/NoteRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repository/impl/ProfesorRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/impl/ProfesorRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repository/impl/StudentRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/impl/StudentRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/GrupaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/GrupaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/MaterieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/MaterieService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/MedieCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/MedieCalculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/ProfesorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/ProfesorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/GrupaServiceImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/GrupaServiceImpl$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/GrupaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/GrupaServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/MaterieServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/MaterieServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/MedieAritmeticaImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/MedieAritmeticaImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/MediePonderataImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/MediePonderataImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/ProfesorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/ProfesorServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/StudentServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +104,7 @@
       <workItem from="1683738644767" duration="30453000" />
       <workItem from="1684488291913" duration="20460000" />
       <workItem from="1684756217295" duration="10000" />
-      <workItem from="1684756249066" duration="47237000" />
+      <workItem from="1684756249066" duration="47654000" />
     </task>
     <servers />
   </component>
