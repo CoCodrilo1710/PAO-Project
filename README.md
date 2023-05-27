@@ -30,6 +30,9 @@ Are in componenta sa 7 tabele.
 ## Clasa Sealed
 Am transformat clasa Persoana intr-o clasa Sealed cu permitere pentru Student si Profesor.
 
+## Iterator
+Am implementat un iterator aflat in serviciul Grupei in metoda de afisare a studentilor impreuna cu notele lor.
+
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 
