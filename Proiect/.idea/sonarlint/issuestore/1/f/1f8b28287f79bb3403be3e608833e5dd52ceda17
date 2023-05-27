@@ -1,0 +1,25 @@
+
+q
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(È‹Ö¤ÿÿÿÿÿ8­Ğ„…1
+q
+java:S2095R"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(È‹Ö¤ÿÿÿÿÿ8­Ğ„…1
+q
+java:S2095A"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(­üò±øÿÿÿÿ8­Ğ„…1
+q
+java:S20955"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(È‹Ö¤ÿÿÿÿÿ8­Ğ„…1
+q
+java:S2095q"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(È‹Ö¤ÿÿÿÿÿ8­Ğ„…1
+q
+java:S2095&"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(È‹Ö¤ÿÿÿÿÿ8­Ğ„…1
+q
+java:S2095d"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(•¸ÈØıÿÿÿÿ8­Ğ„…1
+H
+java:S1168"+Return an empty collection instead of null.(¥¹ï8‘­Ğ„…1
+H
+java:S1168,"+Return an empty collection instead of null.(¥¹ï8‘­Ğ„…1
+O
+java:S1128"2Remove this unused import 'mapper.ProfesorMapper'.(Ô„¾Ë8ºú˜……1
+J
+java:S1128"(Remove this unused import 'model.Grupa'.(ë—äşÿÿÿÿ8ºú˜……1
+G
+java:S1128"*Remove this unused import 'model.Materie'.(‹¥¼™8ºú˜……1

@@ -1,0 +1,11 @@
+
+’
+java:S1319_"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ùŞäúÿÿÿÿ8¥›ûÿ„1
+†
+java:S1319c"dThe type of "note" should be an interface such as "List" rather than the implementation "ArrayList".(®¶ì©úÿÿÿÿ8¥›ûÿ„1
+
+java:S1319k"sThe return type of this method should be an interface such as "SortedSet" rather than the implementation "TreeSet".(—ÃÚ†8¥›ûÿ„1
+Œ
+java:S1319o"jThe type of "absente" should be an interface such as "SortedSet" rather than the implementation "TreeSet".(éÖÆöşÿÿÿÿ8¥›ûÿ„1
+y
+java:S14883"\Immediately return this expression instead of assigning it to the temporary variable "aici".(¼´ı²8¦›ûÿ„1

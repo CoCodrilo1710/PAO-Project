@@ -5,43 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ffabfbb-abef-4f35-a2cb-dc5c0bc15d44" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CsvFile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CsvFile.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ProfesorMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ProfesorMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Grupa$GrupaBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Grupa$GrupaBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Grupa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Grupa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Materie$MaterieBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Materie$MaterieBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Materie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Materie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/abstracts/Persoana$PersoanaBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/abstracts/Persoana.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/abstracts/Profesor$ProfesorBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/abstracts/Profesor$ProfesorBuilderImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/abstracts/Profesor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/abstracts/Student$StudentBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/abstracts/Student$StudentBuilderImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/abstracts/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repository/NoteRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/NoteRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repository/ProfesorRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/ProfesorRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repository/StudentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/StudentRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repository/impl/NoteRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/impl/NoteRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repository/impl/ProfesorRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/impl/ProfesorRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repository/impl/StudentRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/impl/StudentRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/GrupaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/GrupaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/MaterieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/MaterieService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/MedieCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/MedieCalculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/ProfesorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/ProfesorService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/GrupaServiceImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/GrupaServiceImpl$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/GrupaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/GrupaServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/MaterieServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/MaterieServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/MedieAritmeticaImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/MedieAritmeticaImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/MediePonderataImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/MediePonderataImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/ProfesorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/ProfesorServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/StudentServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,23 +37,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "database.query.execution",
-    "sql.rename.search.for.storage.occurrences": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
+    &quot;sql.rename.search.for.storage.occurrences&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -104,7 +71,10 @@
       <workItem from="1683738644767" duration="30453000" />
       <workItem from="1684488291913" duration="20460000" />
       <workItem from="1684756217295" duration="10000" />
-      <workItem from="1684756249066" duration="47654000" />
+      <workItem from="1684756249066" duration="48829000" />
+      <workItem from="1684985375012" duration="316000" />
+      <workItem from="1685125968616" duration="658000" />
+      <workItem from="1685177512393" duration="821000" />
     </task>
     <servers />
   </component>

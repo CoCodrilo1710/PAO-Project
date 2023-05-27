@@ -37,8 +37,10 @@ public class GrupaServiceImpl implements GrupaService {
             Student xy = listStudenti.get(i);
             System.out.println("Notele sale sunt urmatoarele: ");
             System.out.println();
-            for (Materie mat : xy.getSituatie()) {
-
+            Iterator<Materie> iterator = xy.getSituatie().iterator();
+            while (iterator.hasNext())
+            {
+                Materie mat = iterator.next();
                 System.out.println("Materia: --- " + mat.getNumeMaterie() + " ---");
                 System.out.println("Note: ");
                 for (model.FormaNota FormaNota : mat.getNote()) {

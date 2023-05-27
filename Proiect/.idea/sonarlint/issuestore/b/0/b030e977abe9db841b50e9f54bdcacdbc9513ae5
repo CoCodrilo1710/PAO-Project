@@ -1,0 +1,54 @@
+
+b
+java:S1854"@Remove this useless assignment to local variable "medieMaterie".(àı·×ÿÿÿÿÿ8¬Àú……1
+b
+java:S1854"@Remove this useless assignment to local variable "medieMaterie".(¹Ö±¬øÿÿÿÿ8¬Àú……1
+a
+java:S1854"?Remove this useless assignment to local variable "medieTotala".(¹Ö±¬øÿÿÿÿ8¬Àú……1
+L
+java:S1659"*Declare "medieMaterie" on a separate line.(¹Ö±¬øÿÿÿÿ8¬Àú……1
+R
+java:S1481"0Remove this unused "medieTotala" local variable.(¹Ö±¬øÿÿÿÿ8¬Àú……1
+\
+java:S1854("?Remove this useless assignment to local variable "mainMaterii".(¯ëÂ8­Àú……1
+M
+java:S1481("0Remove this unused "mainMaterii" local variable.(¯ëÂ8­Àú……1
+d
+java:S1126*"BReplace this if-then-else statement by a single method invocation.(Ø÷Û”ıÿÿÿÿ8­Àú……1
+Z	java:S1064"9Replace this use of System.out or System.err by a logger.(¦Öºàıÿÿÿÿ8®Àú……1
+Z	java:S1065"9Replace this use of System.out or System.err by a logger.(Í¿Ãğûÿÿÿÿ8®Àú……1
+Z	java:S1066"9Replace this use of System.out or System.err by a logger.(ªœÊÈıÿÿÿÿ8®Àú……1
+Z	java:S1067"9Replace this use of System.out or System.err by a logger.( §ÌÖùÿÿÿÿ8®Àú……1
+U	java:S1068"9Replace this use of System.out or System.err by a logger.(Üäå8®Àú……1
+Z	java:S1069"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¯Àú……1
+Z	java:S106:"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¯Àú……1
+U	java:S106<"9Replace this use of System.out or System.err by a logger.(Š­Ò©8¯Àú……1
+Z	java:S106="9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¯Àú……1
+Z	java:S106@"9Replace this use of System.out or System.err by a logger.(Ş ûúÿÿÿÿ8¯Àú……1
+Z	java:S106A"9Replace this use of System.out or System.err by a logger.(«ØÃŞøÿÿÿÿ8¯Àú……1
+U	java:S106C"9Replace this use of System.out or System.err by a logger.(á‹¾Â8¯Àú……1
+Z	java:S106F"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¯Àú……1
+Z	java:S106G"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¯Àú……1
+U	java:S106H"9Replace this use of System.out or System.err by a logger.( ßÖ·8¯Àú……1
+Z	java:S106I"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8°Àú……1
+Z	java:S106J"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8°Àú……1
+U	java:S106K"9Replace this use of System.out or System.err by a logger.(à€¯È8°Àú……1
+U	java:S106M"9Replace this use of System.out or System.err by a logger.(üÃÑ­8°Àú……1
+Z	java:S106N"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8°Àú……1
+Z	java:S106P"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8°Àú……1
+Z	java:S106Q"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8°Àú……1
+Z	java:S106R"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8°Àú……1
+W
+java:S6213e":Rename this variable to not match a restricted identifier.(ø÷Ğ¡8±Àú……1
+Z	java:S106g"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8²Àú……1
+Z	java:S106h"9Replace this use of System.out or System.err by a logger.(¦Ëˆ¤ûÿÿÿÿ8²Àú……1
+Z	java:S106i"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8²Àú……1
+Z	java:S106j"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8²Àú……1
+U	java:S106k"9Replace this use of System.out or System.err by a logger.(øÿóŒ8²Àú……1
+U	java:S106m"9Replace this use of System.out or System.err by a logger.(ÏŞ¯©8²Àú……1
+Z	java:S106o"9Replace this use of System.out or System.err by a logger.(„ÑÚóøÿÿÿÿ8²Àú……1
+Z	java:S106q"9Replace this use of System.out or System.err by a logger.(©¾îüÿÿÿÿ8²Àú……1
+Z	java:S106s"9Replace this use of System.out or System.err by a logger.(—È™Êøÿÿÿÿ8³Àú……1
+Z	java:S106u"9Replace this use of System.out or System.err by a logger.(äõ²ùÿÿÿÿ8³Àú……1
+Z	java:S106w"9Replace this use of System.out or System.err by a logger.(‚÷¦Áûÿÿÿÿ8³Àú……1
+U	java:S106y"9Replace this use of System.out or System.err by a logger.(ñÑ–ğ8³Àú……1

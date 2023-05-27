@@ -1,0 +1,7 @@
+
+•
+java:S1319;"sThe return type of this method should be an interface such as "SortedSet" rather than the implementation "TreeSet".(¬Ú–äøÿÿÿÿ8Íäÿ«„1
+
+java:S1319?"kThe type of "studenti" should be an interface such as "SortedSet" rather than the implementation "TreeSet".(ô±Š¡úÿÿÿÿ8Íäÿ«„1
+S
+java:S2696,"6Make the enclosing method "static" or remove this set.(’°¹“8×äÿ«„1
